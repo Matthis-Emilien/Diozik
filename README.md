@@ -9,3 +9,4 @@ cookies pour rester enregistrer
 sorte de spotify avec possibilité d'ajouter musique grâce à un compte artiste
 offre boutiques /crédit utilisateur pour écouter des musiques
 prenium fictif
+nom == "Diozik"
