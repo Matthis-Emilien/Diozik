@@ -73,7 +73,8 @@ Chaque élève rendra également un document (doc, odt, pdf…) dans lequel vous
 
 #### Schéma SALE :
 
-
+![](https://github.com/Matthis-Emilien/Projet-application-web/blob/main/Projet%20application%20web/Arborescence.png)
+(https://github.com/Matthis-Emilien/Projet-application-web/blob/main/Projet%20application%20web/Arborescence.png)
 
 ----------IDÉES POUR LE PROJET----------
 
