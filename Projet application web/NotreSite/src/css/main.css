@@ -2,14 +2,100 @@
 GLOBAL
 */
 
+body#itsbody{
+    background-color: #0A0A0A;
+}
 /*
 HEADER
 */
+.header {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	height: 50px;
+	line-height: 50px;
+	background-color: #0A0A0A;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
 
+.header .header-logo{
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 30px;
+}
+
+.header .header-logo-photo{
+	height: 75px;
+	width: 102px;
+    margin-left: -18px;
+	position: relative;
+	margin-top: -12px;
+}
+
+.header .header-logo-titre{
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:600;
+	margin-left: -35px;
+	font-size: 22px;
+}
+
+.header .header-menu {
+	float: right;
+	margin-right: 20px;
+	font-family: 'Montserrat', "Semi-bold", sans-serif;
+	font-weight: 300;
+}
+
+.header .header-menu-trait{
+	width: 15px;
+	height: 21px;
+	margin-top: 15px;
+	position: absolute;
+	float: left;
+	margin-left: 72px;
+	opacity: 1;
+}
+
+.header .header-menu .boutique{
+	color: rgb(255,215,0);
+}
+.header .header-menu .boutique:hover{
+	color: #FFFF00;
+}
+
+.header .header-menu a {
+	color: #D2D1C9;
+	font-family: 'Montserrat', "Light", "sans-serif";
+	font-size: 15px;
+	margin-right: 20px;
+}
+
+.header .header-menu a:hover{
+	color: white;
+}
 /*
 BANNER
 */
+.banner-image{
+    position: relative;
+    height: 600px;
+    margin-top: 30px;
+}
 
 /*
 FOOTER
 */
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 735px) {
+}
+
+@media (min-width: 1024px) {
+	
+}
