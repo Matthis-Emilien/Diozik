@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Diozik</title>
+    </head>
+    <body>
+        <header>
+            <a href="{{ url_for('shop') }}">Boutique</a>
+            <a href="{{ url_for('headersign') }}">{{ sign }}</a>
+            <a href="{{ url_for('headerlog') }}">{{ log }}</a>
+        </header>
+
+        <h1>Profil</h1>
+
+        <ul>
+            <li><a href="{{ url_for('user_edit') }}">Édition du compte</a></li>
+            <li><a href="{{ url_for('user_sub') }}">Mes abonnements</a></li>
+            <li><a href="{{ url_for('user_follow') }}">Mes artistes suivis</a></li>
+            <li><a href="{{ url_for('user_rating') }}">Mes notes</a></li>
+            <li><a href="{{ url_for('user_tracks') }}">Mes musiques</a></li>
+        </ul>
+
+        <iframe src="{{ iframe }}" frameborder="1" width=100% height=400px></iframe>
+
+        <a href="{{ url_for('home') }}">Retourner à l'accueil</a>
+    </body>
+    <footer>
+        <a href="{{ url_for('about') }}">À propos</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('cgu_cgc') }}">CGU / CGC</a>
+    </footer>
+</html>

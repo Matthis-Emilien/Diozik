@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diozik</title>
+</head>
+   <body>
+      <p>{{ msg }}</p>
+      <h1>Diozik</h1>
+      <form action = "{{ url_for('signup_result') }}" method = "POST">
+         <h3>Créez son compte :</h3>
+         Nom d'utilisateur :<br>
+         <input type = "text" name = "username" placeholder="4 caractères mininum."/></br>
+         
+         Adresse mail :<br>
+         <input type="email" name = "mail" placeholder="Adresse mail valide"><br>
+         
+         Mot de passe :<br>
+         <input type = "password" name = "password" placeholder="8 caractères minimum."/><br>
+         
+         Confirmer le mot de passe :<br>
+         <input type = "password" name = "password_2" placeholder="8 caractères minimum."/><br>
+         <input type="checkbox" id="keeplog" name="keeplog" checked>
+         <label for="keeplog">Rester connecté</label>
+         <input type = "submit" value = "S'inscrire" /><br>
+      </form>
+      <a href="{{ url_for('login') }}">Se connecter</a>
+      <a href="{{ url_for('home') }}">Retourner à l'accueil</a>
+   </body>
+    <footer>
+        <a href="{{ url_for('about') }}">À propos</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('cgu_cgc') }}">CGU / CGC</a>
+    </footer>
+</html>

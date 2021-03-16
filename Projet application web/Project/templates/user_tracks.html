@@ -1,0 +1,10 @@
+<form action = "{{ url_for('upload_file') }}" method = "POST" enctype = "multipart/form-data">
+     <h3>Mes musiques</h3>
+     <p>Publier une musique :</p>
+     {{ msg }}
+     Nom de votre musique :
+     <input type="text" name="music_title" placeholder="Nom de votre musique">
+     Sélectionné votre fichier :
+     <input type = "file" name = "file"/>
+     <input type = "submit" value="Téléverser"/>
+</form>

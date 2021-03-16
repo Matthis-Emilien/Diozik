@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Diozik</title>
+    </head>
+    <body>
+        <header>
+            <a href="{{ url_for('shop') }}">Boutique</a>
+            <a href="{{ url_for('headersign') }}">{{ sign }}</a>
+            <a href="{{ url_for('headerlog') }}">{{ log }}</a>
+        </header>
+
+        <p>{{ msg }}</p>
+        <h1>Boutique</h1>
+        <a href="{{ url_for('home') }}">Retourner à l'accueil</a>
+
+        <form action="{{ url_for('change_plan') }}" id="change_plan" method="POST">
+            <label for="select_plan">Changer de formule : </label>
+            <select name="plan" id="select_plan" form="change_plan">
+                <option value=1>Diozik Essentiel</option>
+                <option value=2>Diozik Student</option>
+                <option value=3 selected="yes">Diozik Premium</option>
+            </select>
+            <input type="submit" value="Appliquer">
+        </form>
+
+    </body>
+    <footer>
+        <a href="{{ url_for('about') }}">À propos</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('cgu_cgc') }}">CGU / CGC</a>
+    </footer>
+</html>
