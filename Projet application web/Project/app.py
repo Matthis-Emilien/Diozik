@@ -4,16 +4,20 @@
 
 
 # ---------- IMPORTATIONS ---------- #
-from flask import Flask, render_template, request, session, redirect, url_for, request
+from flask import Flask, render_template, session, redirect, url_for, request, Response
 from datetime import timedelta
 from werkzeug.utils import secure_filename
+from pathlib import Path
+from Project.mytracks import MyTracks
+from Project.search import Search
 import sqlite3 as sql
 import os
 import random
+from wtforms import Form, StringField, SelectField
 
 # ---------- INITIALISATION DE FLASK ---------- #
 app = Flask(__name__)
-app.secret_key = "helloworld"
+app.secret_key = os.urandom(24)
 app.permanent_session_lifetime = timedelta(minutes=15)
 
 UPLOAD_FOLDER = './uploads'
@@ -43,8 +47,15 @@ def home():
             con.commit()
         msg = "Connecté en tant que : " + username + ". C'est un compte : " + plan + "."
         log = username
-        sign = "Se déconnecter"
-        return render_template("app.html", msg=msg, log=log, sign=sign)
+        sign = "Déconnexion"
+        if "search_reply" in session:
+            search_reply = session['search_reply']
+            iframe = url_for('search_result')
+            session.pop('search_reply', None)
+        else:
+            iframe = url_for('app_default')
+            search_reply = ""
+        return render_template("app.html", msg=msg, log=log, sign=sign, iframe=iframe, search_reply=search_reply)
     else:
         return render_template("index.html")
     con.close()
@@ -86,7 +97,7 @@ def shop():
             username = cur.fetchall()[0][0]
             con.commit()
         log = username
-        sign = "Se déconnecter"
+        sign = "Déconnexion"
         if "change_planError" in session:
             msg = session["change_planError"]
             session.pop("change_planError", None)
@@ -109,7 +120,7 @@ def user():
             username = cur.fetchall()[0][0]
             con.commit()
         log = username
-        sign = "Se déconnecter"
+        sign = "Déconnexion"
         if "user_iframe" in session:
             iframe = url_for(session["user_iframe"])
         else:
@@ -131,9 +142,9 @@ def contact():
             username = cur.fetchall()[0][0]
             con.commit()
         log = username
-        sign = "Se déconnecter"
+        sign = "Déconnexion"
     else:
-        log = "Se connecter"
+        log = "Connexion"
         sign = "S'inscrire"
     return render_template("contact.html", log=log, sign=sign)
 
@@ -148,15 +159,15 @@ def about():
             username = cur.fetchall()[0][0]
             con.commit()
         log = username
-        sign = "Se déconnecter"
+        sign = "Déconnexion"
     else:
-        log = "Se connecter"
+        log = "Connexion"
         sign = "S'inscrire"
     return render_template("about.html", log=log, sign=sign)
 
 
-@app.route("/cgu_cgc")
-def cgu_cgc():
+@app.route("/cgu_cgv")
+def cgu_cgv():
     if "user" in session:
         with sql.connect("database/database.db") as con:
             cur = con.cursor()
@@ -165,11 +176,11 @@ def cgu_cgc():
             username = cur.fetchall()[0][0]
             con.commit()
         log = username
-        sign = "Se déconnecter"
+        sign = "Déconnexion"
     else:
-        log = "Se connecter"
+        log = "Connexion"
         sign = "S'inscrire"
-    return render_template("cgu_cgc.html", log=log, sign=sign)
+    return render_template("cgu_cgv.html", log=log, sign=sign)
 
 
 # ---------- ROUTES DES PROCESSUS FLASK DE L'APPLICATION ---------- #
@@ -615,13 +626,97 @@ def allowed_file(filename):
 
 
 @app.route('/find_tracks')
-def find_tracks():
+def displaytracks():
     try:
-        with sql.connect("database/database.db") as con:
-            cur = con.cursor()
-
+        dbpath = Path("database", "database.db")
+        author = int(session['user'])
+        mytracks = MyTracks(author, dbpath)
+        mytracks.setTrackList()
+        tracklist = mytracks.getTracklist()
+        trackdic = {}
+        for t in tracklist:
+            pk = t.getPrimaryKey()
+            trackdic[f'{pk}'] = t
+        display = ""
+        for t in trackdic:
+            display += f'<a href="" id={t}>' + '<div>' + trackdic[t].getMusicTitle() + '</div>' + '</a>'
+        return display
     except:
-        return "Eurreur lors de l'opération d'insertion."
+        return "Erreur lors de l'opération de réception."
+
+
+@app.route('/app/search', methods=['POST', 'GET'])
+def search():
+    if request.method == "POST":
+        msg = ""
+        content = request.form['content']
+        try:
+            dbpath = Path("database", "database.db")
+            result = Search(content, dbpath)
+            result.setDBDic()
+            result.setResult()
+            session['search_result'] = result.getResult()
+            msg = ""
+        except:
+            msg = "Erreur lors de l'opération de réception."
+        finally:
+            session['search_reply'] = msg
+            return redirect(url_for('home'))
+
+
+@app.route('/app/default')
+def app_default():
+    return render_template("app_default.html")
+
+
+@app.route('/app/search/result')
+def search_result():
+    if "search_result" in session:
+        get = session['search_result']
+        rslt = get['result']
+        extra = get['extra']
+        try:
+            with sql.connect("database/database.db") as con:
+                cur = con.cursor()
+
+                '''
+                Meilleur résultat :
+                
+                Artistes : 
+                
+                Musiques : 
+                
+                '''
+
+                result = ''''''
+                lenr = len(rslt[0]) + len(rslt[1])
+                lene = len(extra[0]) + len(extra[1])
+                if lenr > 0:
+                    result += 'Meilleurs résultats :'
+                    if len(rslt[0]) > 0:
+                        for i in range(len(rslt[0])):
+                            result += str(rslt[0][i])
+                    if len(rslt[1]) > 0:
+                        for i in range(len(rslt[1])):
+                            result += str(rslt[1][i])
+                if lene > 0:
+                    result += 'Résultat de la recherche :'
+                    if len(extra[0]) > 0:
+                        for i in range(len(extra[0])):
+                            result += str(extra[0][i])
+                    if len(extra[1]) > 0:
+                        for i in range(len(extra[1])):
+                            result += str(extra[1][i])
+                else:
+                    result += 'Aucun résultat pour votre recherche...'
+
+                # result = rslt + extra
+                con.commit()
+        except:
+            result = "Erreur lors de l'opération de réception."
+    else:
+        result = "Aucun résultat trouvé."
+    return render_template("app_search_result.html", result=result)
 
 
 if __name__ == '__main__':

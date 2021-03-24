@@ -1,0 +1,323 @@
+/*
+HEADER
+*/
+.header {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	height: 50px;
+	line-height: 50px;
+	background-color: #0A0A0A;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+.header .header-logo-photo2{
+	height: 74px;
+	width: 82px;
+	position: relative;
+	margin-top: -12px;
+    text-align: center;
+    margin-left: 0px
+}
+
+.header .header-logo-titre2{
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:600;
+	font-size: 22px;
+    position: absolute;
+    margin-left: -20px;
+    text-align: center;
+}
+
+.header-menu{
+	float: left;
+	padding: 0px;
+    margin-top: -80px;
+	font-family: 'Montserrat', "Semi-bold", sans-serif;
+	font-weight: 300;
+    position: absolute;
+}
+
+.header-menu ul{
+	list-style-type: none;
+}
+
+
+.header-menu ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.header-menu a{
+    color: white;
+	display: block;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+
+}
+.header-menu .icon{
+    width: 100px;
+    height: 80px;
+    margin-top: -14px;
+    font-size: 22px;
+    /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée de trois centième de seconde. */
+    -webkit-transition: all 0.3s ease; /* Safari et Chrome */
+    -moz-transition: all 0.3s ease; /* Firefox */
+    -ms-transition: all 0.3s ease; /* Internet Explorer 9 */
+    -o-transition: all 0.3s ease; /* Opera */
+    transition: all 0.3s ease;
+}
+
+.header-menu .icon:hover{
+    /* L'image est grossie de 25% */
+    -webkit-transform:scale(1.15); /* Safari et Chrome */
+    -moz-transform:scale(1.15); /* Firefox */
+    -ms-transform:scale(1.15); /* Internet Explorer 9 */
+    -o-transform:scale(1.15); /* Opera */
+    transform:scale(1.15);
+    color: rgb(255,215,0);
+}
+.header-menu a:hover{
+	color: yellow;
+}
+.separateur{
+    margin-top: 0px;
+    margin-bottom: 0px
+}
+
+.separateur-header{
+    color: aqua;
+    margin-top: 0px;
+    margin-bottom: 0px
+}
+
+.sous{
+	display: none;
+	box-shadow: 0px 1px 2px #CCC;
+	background-color: #161515;
+	position: relative;
+    margin-top: -15px;
+	width: 100%;
+	z-index: 1000;
+    text-align: center;
+}
+
+.sous li .t2:after{
+  content: '';
+  display: block;
+  height: 0.1px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+  margin-top: -13px;
+  margin-left: -3px;
+  background: red;
+}
+
+.sous li .t2:hover:after {
+  width: 80px;
+  background: #FFFFFF;
+}
+
+.sous li{
+	float: none;
+	text-align: left;
+}
+
+.header-menu > ul li:hover .sous{
+	display: block;
+    position: fixed;
+}
+
+.sous a{
+	padding: 10px;
+	border-bottom: none;
+    margin-bottom: 10px
+}
+
+.sous a:hover{
+	border-bottom: none;
+
+}
+
+.header-menu ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	position: relative;
+}
+
+.header-menu ul li .t{
+    /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée de trois centième de seconde. */
+    -webkit-transition: all 0.3s ease; /* Safari et Chrome */
+    -moz-transition: all 0.3s ease; /* Firefox */
+    -ms-transition: all 0.3s ease; /* Internet Explorer 9 */
+    -o-transition: all 0.3s ease; /* Opera */
+    transition: all 0.3s ease;
+    margin-left: 10px;
+
+    opacity: 0.7;
+}
+
+.header-menu ul li .t:hover{
+    margin-left: 20px;
+    /* L'image est grossie de 25% */
+    -webkit-transform:scale(1.10); /* Safari et Chrome */
+    -moz-transform:scale(1.10); /* Firefox */
+    -ms-transform:scale(1.10); /* Internet Explorer 9 */
+    -o-transform:scale(1.10); /* Opera */
+    transform:scale(1.10);
+    transform:scale(1.10);
+    opacity: 1;
+}
+
+.sous2{
+	display: none;
+    position: relative;
+}
+
+.header .header-menu .boutique{
+    color: rgb(255,215,0);
+    margin-top: -10px;
+    display: none;
+}
+
+.header .header-menu .boutique:hover{
+    color: #FFFF00;
+}
+
+.header-logo{
+    display: none;
+}
+
+.header-logo-titre{
+    display: none;
+}
+
+.shop{
+    float: right;
+    position: relative;
+    color: white;
+    width: 90px;
+    font-size: 22px;
+    /* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée de trois centième de seconde. */
+    -webkit-transition: all 0.3s ease; /* Safari et Chrome */
+    -moz-transition: all 0.3s ease; /* Firefox */
+    -ms-transition: all 0.3s ease; /* Internet Explorer 9 */
+    -o-transition: all 0.3s ease; /* Opera */
+    transition: all 0.3s ease;
+
+}
+
+.shop:hover{
+    color:rgb(255,215,0);
+    /* L'image est grossie de 25% */
+    -webkit-transform:scale(1.15); /* Safari et Chrome */
+    -moz-transform:scale(1.15); /* Firefox */
+    -ms-transform:scale(1.15); /* Internet Explorer 9 */
+    -o-transform:scale(1.15); /* Opera */
+    transform:scale(1.15);
+}
+
+@media (min-width: 1024px) {
+	/*
+	HEADER
+	*/
+	.header {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		height: 50px;
+		line-height: 50px;
+		background-color: #0A0A0A;
+		position: fixed;
+		top: 0;
+		z-index: 999;
+	}
+
+	.header .header-logo{
+		color: white;
+		font-family: 'Montserrat', sans-serif;
+		float: left;
+		margin-left: 30px;
+	}
+
+	.header .header-logo-photo{
+		height: 75px;
+		width: 102px;
+		margin-left: -18px;
+		position: static;
+		margin-top: -12px;
+	}
+
+	.header .header-logo-titre{
+		color: white;
+		font-family: 'Montserrat', sans-serif;
+		font-weight:600;
+		margin-left: 80px;
+		font-size: 22px;
+        position: absolute;
+	}
+
+	.header .header-menu {
+        position: relative;
+		float: right;
+		margin-right: 20px;
+		font-family: 'Montserrat', "Semi-bold", sans-serif;
+		font-weight: 300;
+	}
+
+	.header .header-menu .boutique2{
+		color: rgb(255,215,0);
+	}
+	.header .header-menu .boutique2:hover{
+		color: #FFFF00;
+	}
+
+	.header .header-menu a {
+		color: #D2D1C9;
+		font-family: 'Montserrat', "Light", "sans-serif";
+		font-size: 15px;
+		margin-right: 20px;
+        padding-top: 80px;
+	}
+
+	.header .header-menu a:hover{
+		color: white;
+	}
+
+	.header .test{
+		display: none;
+	}
+
+    .sous2{
+        display: block;
+    }
+
+    .pc{
+    display: none;
+    }
+
+    .header-logo{
+        display: block;
+    }
+
+    .header-logo-titre{
+        display: block;
+    }
+
+    .sous{
+        display: block;
+    }
+
+    .shop{
+        display: none;
+    }
+	/*
+	HEADER
+	*/
+}
