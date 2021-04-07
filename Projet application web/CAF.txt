@@ -1,0 +1,18 @@
+CAF:
+
+Prioritaire :
+- CSS acceuil
+- CSS profil
+- A propos a coder
+- CSS page contact
+
+- Changer username par INITIAL (2 premières lettres)
+
+- SUGGESTIONS
+- UPLOAD DES MUSIQUES
+
+- REORGANISEE GITHUB (mettre github commun héberger)
+
+Secondaire:
+- Problèmes liés au CSS (boutique...)
+- Bouton retourner a l'acceuil lors du paiement
