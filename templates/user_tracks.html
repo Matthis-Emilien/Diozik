@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <! -- HEAD -- >
+    <head>
+        <script src="jquery-3.5.1.min.js"></script>
+        <meta charset="utf-8">
+        <title> Diozik </title>
+
+        <! -- CSS -- >
+        <!--importation de BULMA-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <link rel="icon" href="static/img/icon.ico"/>
+        <link rel="stylesheet" type="text/css" href="static/css/user.css">
+
+        <! -- CSS -- >
+
+        <! -- FONT -- >
+        <!--Importation des polices-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
+        <! -- FONT -->
+    </head>
+    <! -- HEAD -- >
+
+    <! -- BODY -- >
+    <body id="itsbody">
+          <form action = "{{ url_for('upload_file') }}" method = "POST" enctype = "multipart/form-data">
+                <h3>Mes musiques</h3>
+                <p>Publier une musique :</p>
+                {{ msg }}
+                Nom de votre musique :
+                <input type="text" name="music_title" placeholder="Nom de votre musique">
+                Sélectionné votre fichier :
+
+                <div id="file-js-example" class="file has-name">
+                     <label class="file-label">
+                           <input class="file-input" type="file" name="file">
+                           <span class="file-cta">
+                                 <span class="file-icon">
+                                       <i class="fas fa-upload"></i>
+                                 </span>
+                                 <span class="file-label">
+                                       Choisir un fichier...
+                                 </span>
+                           </span>
+                           <span class="file-name">
+                                 Aucun fichier sélectionné
+                           </span>
+                     </label>
+                </div>
+
+                <script src="./static/js/filename.js"></script>
+                <script>
+                    const fileInput = document.querySelector('#file-js-example input[type=file]');
+                    fileInput.onchange = () => {
+                        if (fileInput.files.length > 0) {
+                            const fileName = document.querySelector('#file-js-example .file-name');
+                            fileName.textContent = fileInput.files[0].name;
+                        }
+                    }
+                </script>
+
+                <input type = "submit" value="Téléverser"/>
+          </form>
+
+          <h3>Mes musiques :</h3>
+          <iframe src="{{ url_for('displaytracks', authorPK=session['user']) }}" frameborder="0" width="100%" height="400px"></iframe>
+    </body>
+</html>

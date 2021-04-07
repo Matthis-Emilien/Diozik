@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<! -- HEAD -- >
+    <head>
+
+        <script src="jquery-3.5.1.min.js"></script>
+        <meta charset="utf-8">
+        <title> Diozik </title>
+        
+        <! -- CSS -- >
+        <!--importation de BULMA--> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <link rel="icon" href="../static/img/icon.ico"/>
+        <link rel="stylesheet" href="../static/css/cgu_cgv_pdc.css">
+        <! -- CSS -- >
+        
+        <! -- JS -- >
+        <script src="../static/js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap/min.js"></script>
+        <! -- JS -- >
+        
+        <! -- FONT -- >
+        <!--Importation des polices-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
+        <! -- FONT -->
+
+    </head>
+    
+    <body id="body">
+        <div class="block" >
+			<header class="header">
+				<center class="pc"><a href="{{ url_for('home') }}" class="header-logo2"> <img src="../static/img/site2.png" class="header-logo-photo2"></a>
+				<a href="{{ url_for('home') }}" class="header-logo-titre2">Diozik</a><a class="shop" href="{{ url_for('shop') }}"><i class="fas fa-shopping-cart"></i></a></center>
+                <a href="{{ url_for('home') }}" class="header-logo"> <img src="../static/img/site2.png" class="header-logo-photo"></a>
+				<a href="{{ url_for('home') }}" class="header-logo-titre">Diozik</a>
+				<nav class="header-menu">
+					<ul class="test">
+						<li class="deroulant"><a  class="icon" href="" id="menu-icon"><i class="fas fa-bars"></i></a>
+							<ul class="sous">
+                                <hr class="separateur">
+								<li class="t"><a href="{{ url_for('shop') }}" class="boutique">Boutique</a></li>
+								<li class="t"><a class="t2" href="{{ url_for('about') }}">A propos</a></li>
+								<li class="t"><a class="t2" href="{{ url_for('headersign') }}">{{ sign }}</a></li>
+								<li class="t"><a class="t2" href="{{ url_for('headerlog') }}">{{ log }}</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="sous2">
+						<li><a href="{{ url_for('shop') }}" class="boutique2">Boutique</a></li>
+						<li><a href="{{ url_for('about') }}">A propos</a></li>
+						<li><a href="{{ url_for('headersign') }}">{{ sign }}</a></li>
+						<li><a href="{{ url_for('headerlog') }}">{{ log }}</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+        <div class="tabs is-toggle is-fullwidth">
+            <ul>
+                <li class="choose">
+                    <a href="{{ url_for('cgu') }}" target="frame">
+                        <span class="icon is-small"></span>
+                        <span class="text"><i id="logo" class="fas fa-align-left"></i>Conditions Générales d'Utilisations<i id="logo2" class="fas fa-sort-down"></i></span>
+                    </a>
+                </li>
+                <li class="choose">
+                    <a href="{{ url_for('cgv') }}" target="frame">
+                        <span class="icon is-small"></span>
+                        <span class="text"><i id="logo"  class="fas fa-align-left"></i>Conditions Générales de Ventes<i id="logo2" class="fas fa-sort-down"></i></span>
+                    </a>
+                </li>
+                <li class="choose">
+                    <a href="{{ url_for('pdc') }}" target="frame">
+                        <span class="icon is-small"></span>
+                        <span class="text"><i id="logo" class="fas fa-align-left"></i>Politique de Confidentialité<i id="logo2" class="fas fa-sort-down"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <iframe src="{{ url }}" frameborder="0" name="frame" style="overflow:scroll;" seamless="seamless" allowtransparency="true" class="frame1" scrolling="yes">
+            <p>Votre navigateur ne supporte aucune iframe !</p>
+        </iframe>
+    </body>
+</html>
