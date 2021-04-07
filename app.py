@@ -17,9 +17,9 @@ from email.mime.text import MIMEText
 from flask import Flask, render_template, session, redirect, url_for, request, Response
 from werkzeug.utils import secure_filename
 
-from Project.mytracks import MyTracks
-from Project.track import Track
-from Project.search import Search
+from mytracks import MyTracks
+from track import Track
+from search import Search
 
 # ---------- INITIALISATION DE FLASK ---------- #
 app = Flask(__name__)
@@ -30,7 +30,7 @@ ALLOWED_EXTENSIONS = {'mp3', 'wav'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.config['SECRET_KEY'] = "\xc7\x0c\x0b\xfe\x14\x88\xf3\xdd\x97\xc1?\xfa\xa1O\x90\xbduy#\xffw\r\xfb5"
+app.config['SECRET_KEY'] = "helloworld"
 
 # ---------- VARIABLES GLOBALES ---------- #
 char = {
