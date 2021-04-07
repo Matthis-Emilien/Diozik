@@ -15,6 +15,11 @@ Prioritaire :
 - REORGANISEE GITHUB
 - ÉCRIRE LE README = DOCUMENTATION
 
+- Modifier rapidement les liens dans les mails (mot de passe ooublié, contact...)
+
 Secondaire:
 - Problèmes liés au CSS (boutique...)
 - Bouton retourner a l'acceuil lors du paiement
+
+Bonus:
+- Confirmation email lors d'inscription
