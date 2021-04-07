@@ -20,6 +20,7 @@ Prioritaire :
 Secondaire:
 - Problèmes liés au CSS (boutique...)
 - Bouton retourner a l'acceuil lors du paiement
+- Créer un GITIGNORE
 
 Bonus:
 - Confirmation email lors d'inscription
