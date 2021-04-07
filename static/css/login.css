@@ -1,0 +1,370 @@
+#body{
+    background: #0A0A0A;
+    min-height: 100%;
+    min-width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+.video1{
+    display: none;
+}
+.women_photo{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*    .boutton{
+    text-decoration: none;
+    border: 3px solid #76ed63;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.boutton:hover{
+    box-shadow: 1px 1px 20px 10px #75ed639f;
+}
+
+.boutton:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(110deg, transparent, #75ed639f, transparent);
+    transition: all 750ms;
+}
+
+.boutton:hover:before{
+    left: 100%;
+}*/
+
+.titre{
+    font-size: 45px;
+    position: fixed;
+    z-index: 999;
+    padding-left:20px;
+    font-family: 'Montserrat',"Semi-bold", sans-serif;
+    font-weight: 900;
+    color: white;
+}
+
+.titre2{
+    font-size: 18px;
+    position: fixed;
+    z-index: 999;
+    padding-left:190px;
+    padding-top: 20px;
+    font-family: 'Montserrat',"Semi-bold", sans-serif;
+    font-weight: 500;
+    color: rgb(255,215,0);
+}
+
+.box{
+    background: rgb(255,215,0);
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+    margin-top: 195px;
+    margin-bottom: 120px;
+}
+
+
+.box .label{
+    font-family: 'Montserrat',"Semi-bold",sans-serif;
+    font-weight: 600;
+    color: #0A0A0A;
+    text-align: center;
+    font-size: 13px;
+}
+
+.box .input{
+    background: white;
+    font-family: 'Montserrat',"Semi-bold",sans-serif;
+    padding: 15px;
+    position: relative;
+    font-size: 80%;
+}
+
+.box .keeplog{
+}
+
+.box .button is-warning{
+}
+
+.box .separateur{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.box .interaction a{
+    font-family: 'Montserrat',"Semi-bold",sans-serif;
+    color: #0A0A0A;
+    font-size: 15px;
+    transition: width,background, 0.1s ease 0.1s;
+    -webkit-transition: width,background, 0.1s ease 0.1s; 
+}
+
+.box .interaction a:hover{
+    color: white;
+}
+
+.slogan_signup{
+    color: white;
+    position: relative;
+    text-align: center;
+    font-family: 'Montserrat',"Semi-bold",sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.bug{
+    min-width: 100%;
+    position: relative;
+    color: red;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.bug .padding{
+    color: rgba(0,0,0,0)
+}
+
+@media (min-width: 830px){
+    .video1{
+        display: none;
+    }
+    .women_photo{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
+    
+    .titre{
+        font-size: 75px;
+        position: fixed;
+        z-index: 999;
+        padding-left:20px;
+        font-family: 'Montserrat',"Semi-bold", sans-serif;
+        font-weight: 900;
+        color: white;
+    }
+
+    .titre2{
+        font-size: 45px;
+        position: fixed;
+        z-index: 999;
+        padding-left:300px;
+        padding-top: 20px;
+        font-family: 'Montserrat',"Semi-bold", sans-serif;
+        font-weight: 500;
+        color: rgb(255,215,0);
+    }
+
+    .box{
+        background: rgb(255,215,0);
+        margin: 0 auto;
+        position: relative;
+        width: 40%;
+        height: 100%;
+        margin-top: 195px;
+        margin-bottom: 120px;
+    }
+
+
+    .box .label{
+        font-family: 'Montserrat',"Semi-bold",sans-serif;
+        font-weight: 600;
+        color: #0A0A0A;
+        text-align: center;
+        font-size: 19px;
+    }
+
+    .box .input{
+        background: white;
+        font-family: 'Montserrat',"Semi-bold",sans-serif;
+        padding: 15px;
+        position: relative;
+    }
+
+
+    .box .button is-warning{
+    }
+
+    .box .separateur{
+        display: inline-block;
+        margin-top: 10px;
+        margin-left:5px;
+        margin-right:5px;
+    }
+
+    .box .interaction a{
+        font-family: 'Montserrat',"Semi-bold",sans-serif;
+        color: #0A0A0A;
+        font-size: 15px;
+        transition: width,background, 0.1s ease 0.1s;
+        -webkit-transition: width,background, 0.1s ease 0.1s; 
+    }
+
+    .box .interaction a:hover{
+        color: white;
+    }
+
+    .slogan_signup{
+        color: white;
+        position: relative;
+        text-align: center;
+        font-family: 'Montserrat',"Semi-bold",sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    .bug{
+        min-width: 100%;
+        position: relative;
+        color: red;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    
+    .bug .padding{
+        color: rgba(0,0,0,0)
+    }
+}
+
+@media (min-width: 1320px){
+    .video1{
+      display: block;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    .titre{
+        font-size: 75px;
+        position: fixed;
+        z-index: 999;
+        padding-left:20px;
+        font-family: 'Montserrat',"Semi-bold", sans-serif;
+        font-weight: 900;
+        color: white;
+    }
+
+    .titre2{
+        font-size: 45px;
+        position: fixed;
+        z-index: 999;
+        padding-left:300px;
+        padding-top: 20px;
+        font-family: 'Montserrat',"Semi-bold", sans-serif;
+        font-weight: 500;
+        color: rgb(255,215,0);
+    }
+
+    .box{
+        background: white;
+        margin: 0 auto;
+        position: relative;
+        width: 35%;
+        margin-top: 155px;
+        margin-bottom: 120px;
+        -webkit-transition: all 0.3s ease; /* Safari et Chrome */
+        -moz-transition: all 0.3s ease; /* Firefox */
+        -ms-transition: all 0.3s ease; /* Internet Explorer 9 */
+        -o-transition: all 0.3s ease; /* Opera */
+        transition: all 0.3s ease;
+        opacity: 0.7;
+    }
+
+    .box:hover{
+        -webkit-transform:scale(1.03); /* Safari et Chrome */
+        -moz-transform:scale(1.03); /* Firefox */
+        -ms-transform:scale(1.03); /* Internet Explorer 9 */
+        -o-transform:scale(1.03); /* Opera */
+        transform:scale(1.03);
+        opacity: 1;
+        width: 50%;
+    }
+
+    .box .label{
+        font-family: 'Montserrat',"Semi-bold",sans-serif;
+        font-weight: 600;
+        color: #0A0A0A;
+        text-align: center;
+        font-size: 19px;
+        padding-top: 20px;
+    }
+
+    .box .input{
+        background: white;
+        font-family: 'Montserrat',"Semi-bold",sans-serif;
+        padding: 15px;
+        position: relative;
+    }
+
+    .box .keeplog{
+        padding-bottom: 10px;
+    }
+
+    .box .button is-warning{
+        background-color: rgb(255,215,0);
+        color: white;
+
+    }
+
+    .box .separateur{
+        display: inline-block;
+        margin-top: 10px;
+        margin-left:5px;
+        margin-right:5px;
+    }
+
+    .box .interaction a{
+        font-family: 'Montserrat',"Semi-bold",sans-serif;
+        color: #0A0A0A;
+        font-size: 15px;
+        transition: width,background, 0.1s ease 0.1s;
+        -webkit-transition: width,background, 0.1s ease 0.1s; 
+    }
+
+    .box .interaction a:hover{
+        color: rgb(255,215,0);
+    }
+
+    .slogan_signup{
+        color: white;
+        position: relative;
+        text-align: center;
+        font-family: 'Montserrat',"Semi-bold",sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    .bug{
+        min-width: 100%;
+        position: relative;
+        color: red;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    
+    .bug .padding{
+        color: rgba(0,0,0,0)
+    }
+    
+    .women_photo{
+        display: none;
+    }
+    
+    .boutton .devenir{
+        display: none;
+    }
+}
