@@ -10,6 +10,7 @@ Prioritaire :
 
 - SUGGESTIONS
 - UPLOAD DES MUSIQUES
+- RENDRE LA BOUTIQUE UTILISABLE
 
 - REORGANISEE GITHUB (mettre github commun héberger)
 
