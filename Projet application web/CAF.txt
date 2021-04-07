@@ -12,7 +12,7 @@ Prioritaire :
 - UPLOAD DES MUSIQUES
 - RENDRE LA BOUTIQUE UTILISABLE
 
-- REORGANISEE GITHUB (mettre github commun héberger)
+- REORGANISEE GITHUB
 
 Secondaire:
 - Problèmes liés au CSS (boutique...)
