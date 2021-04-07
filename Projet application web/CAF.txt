@@ -13,6 +13,7 @@ Prioritaire :
 - RENDRE LA BOUTIQUE UTILISABLE
 
 - REORGANISEE GITHUB
+- ÉCRIRE LE README = DOCUMENTATION
 
 Secondaire:
 - Problèmes liés au CSS (boutique...)
