@@ -25,6 +25,8 @@ Secondaire:
 - Bouton retourner a l'acceuil lors du paiement
 - Créer un GITIGNORE
 - Finitions de la page home (image formules, button commencer [hover])
+- Ajouter la possibilité de supprimer son compte
+- Ajouter la possibilité de supprimer ou renommer sa/ses musiques
 
 Bonus:
 - Confirmation email lors d'inscription
