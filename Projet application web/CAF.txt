@@ -1,6 +1,9 @@
 CAF:
 
 Prioritaire :
+
+- Parcours d'arbre
+
 - CSS acceuil
 - CSS profil
 - A propos a coder
@@ -21,6 +24,7 @@ Secondaire:
 - Problèmes liés au CSS (boutique...)
 - Bouton retourner a l'acceuil lors du paiement
 - Créer un GITIGNORE
+- Finitions de la page home (image formules, button commencer [hover])
 
 Bonus:
 - Confirmation email lors d'inscription
