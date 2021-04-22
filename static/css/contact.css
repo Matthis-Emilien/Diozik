@@ -1,3 +1,7 @@
+#itsbody{
+    background: rgb(10,10,10);
+}
+
 /*
 HEADER
 */
@@ -223,6 +227,58 @@ nav ul li .t:hover{
     transform:scale(1.15);
 }
 
+.footer{
+    align-content: center;
+    background: #0A0A0A;
+    text-align: center;
+    z-index: 990;
+    color: white;
+    position: relative;
+    font-size: 13px;
+    font-family: 'Montserrat',"Semi-bold",sans-serif;
+    font-weight: 400;
+    bottom: 0;
+    padding-bottom: 45px;
+}
+
+.footer a{
+    color: white;
+}
+
+.footer a:hover{
+    color: #979A9A;
+}
+
+.footer .under_propos{
+    margin-top: 10px;
+    font-size: 8px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+/*
+FOOTER
+*/
+
+@media (min-width: 830px) {
+    .footer{
+        position: relative;
+        font-size: 15px;
+    }
+
+    .footer a{
+        color: white;
+    }
+
+
+    .footer .under_propos{
+        font-size: 10px;
+        text-align: center;
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+}
+
 @media (min-width: 1024px) {
 	/*
 	HEADER
@@ -266,13 +322,14 @@ nav ul li .t:hover{
 	.header .header-menu {
         position: relative;
 		float: right;
-		margin-right: 20px;
+		margin-right: -80px;
 		font-family: 'Montserrat', "Semi-bold", sans-serif;
 		font-weight: 300;
 	}
 
 	.header .header-menu .boutique2{
 		color: rgb(255,215,0);
+		margin-right: 150px;
 	}
 	.header .header-menu .boutique2:hover{
 		color: #FFFF00;
@@ -320,4 +377,167 @@ nav ul li .t:hover{
 	/*
 	HEADER
 	*/
+
+    .back{
+        margin-top: 20px;
+        margin-left: 20px;
+        background: rgb(255,215,0);
+        border-radius: 10px;
+        width: 190px;
+        padding:3px;
+        height: 30px;
+        -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
+        -moz-transition: all 0.1s ease-out; /* Firefox */
+        -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
+        -o-transition: all 0.1s ease-out; /* Opera */
+        transition: all 0.1s ease-out;
+    }
+
+    .back:hover{
+        background: rgb(30,30,30);
+        -webkit-transform:scale(1.04); /* Safari et Chrome */
+        -moz-transform:scale(1.04); /* Firefox */
+        -ms-transform:scale(1.04); /* Internet Explorer 9 */
+        -o-transform:scale(1.04); /* Opera */
+        transform:scale(1.04);
+    }
+
+    .back:hover .home{
+        color: white;
+    }
+
+    .home{
+        font-family: 'Montserrat',"",sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: rgb(10,10,10);
+    }
+
+    .fas{
+        font-size: 90%;
+    }
+
+    .contact-title{
+        margin-top: -60px;
+        text-align:center;
+        font-family: 'Montserrat',"",sans-serif;
+        font-weight: 700;
+        font-size: 55px;
+        color: rgb(255,215,0);
+    }
+
+    .msg-title{
+        text-align:center;
+        font-family: 'Montserrat',"",sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        color: red;
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+
+    label{
+        font-family: 'Montserrat',"", sans-serif;
+        color: white;
+        margin-left: 20px;
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    .input-section input{
+        align-content: center;
+        border-radius: 5px;
+        font-family: 'Montserrat',"", sans-serif;
+        float: left;
+        padding-left: 5px;
+        height: 40px;
+        min-width: 98%;
+        background : rgb(30, 30, 30);
+        border: none;
+        color: white;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+    }
+
+    .message-section input{
+        border-radius: 5px;
+        font-family: 'Montserrat',"", sans-serif;
+        float: left;
+        padding-left: 5px;
+        height: 170px;
+        min-width: 98%;
+        background : rgb(30, 30, 30);
+        border: none;
+        color: white;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+    }
+
+    .submit-section input{
+        border-radius: 5px;
+        font-family: 'Montserrat',"", sans-serif;
+        height: 40px;
+        min-width: 18%;
+        margin-left: 20px;
+        background : rgb(255, 215, 0);
+        border: none;
+        color: rgb(30, 30, 30);
+        font-weight: 700;
+        margin-bottom: 38px;
+        -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
+        -moz-transition: all 0.1s ease-out; /* Firefox */
+        -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
+        -o-transition: all 0.1s ease-out; /* Opera */
+        transition: all 0.1s ease-out;
+    }
+
+    .submit-section input:hover{
+        cursor: pointer;
+        background: rgb(30,30,30);
+        color: white;
+        -webkit-transform:scale(1.04); /* Safari et Chrome */
+        -moz-transform:scale(1.04); /* Firefox */
+        -ms-transform:scale(1.04); /* Internet Explorer 9 */
+        -o-transform:scale(1.04); /* Opera */
+        transform:scale(1.04);
+    }
+
+	.footer{
+        position: relative;
+        font-size: 18px;
+    }
+
+    .footer a{
+        color: white;
+    }
+
+
+    .footer .under_propos{
+        font-size: 13px;
+        text-align: center;
+        padding-left: 190px;
+        padding-right: 190px;
+    }
+}
+
+@media (min-width: 1250px){
+    .footer{
+        position: relative;
+        font-size: 20px;
+    }
+
+    .footer a{
+        color: white;
+    }
+
+
+    .footer .under_propos{
+        margin-top: 15px;
+        font-size: 15px;
+        text-align: center;
+        padding-left: 170px;
+        padding-right: 170px;
+    }
 }

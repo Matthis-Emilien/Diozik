@@ -505,13 +505,14 @@ nav ul li .t:hover{
 	.header .header-menu {
         position: relative;
 		float: right;
-		margin-right: 20px;
+		margin-right: -80px;
 		font-family: 'Montserrat', "Semi-bold", sans-serif;
 		font-weight: 300;
 	}
 
 	.header .header-menu .boutique2{
 		color: rgb(255,215,0);
+		margin-right: 150px;
 	}
 	.header .header-menu .boutique2:hover{
 		color: #FFFF00;
