@@ -17,20 +17,20 @@ from email.mime.text import MIMEText
 from flask import Flask, render_template, session, redirect, url_for, request, Response
 from werkzeug.utils import secure_filename
 
-from mytracks import MyTracks
-from track import Track
-from search import Search
+from Project.mytracks import MyTracks
+from Project.track import Track
+from Project.search import Search
 
 # ---------- INITIALISATION DE FLASK ---------- #
 app = Flask(__name__)
 app.permanent_session_lifetime = timedelta(days=5)
 
 UPLOAD_FOLDER = './uploads'
-ALLOWED_EXTENSIONS = {'mp3', 'wav'}
+ALLOWED_EXTENSIONS = {'mp3'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.config['SECRET_KEY'] = "helloworld"
+app.config['SECRET_KEY'] = "\xc7\x0c\x0b\xfe\x14\x88\xf3\xdd\x97\xc1?\xfa\xa1O\x90\xbduy#\xffw\r\xfb5"
 
 # ---------- VARIABLES GLOBALES ---------- #
 char = {
@@ -53,8 +53,10 @@ def home():
             cur.execute("SELECT plan_title FROM Plans WHERE plan=?", (plan,))
             plan = cur.fetchall()[0][0]
             con.commit()
-        msg = "Connecté en tant que : " + username + ". C'est un compte : " + plan + "."
-        log = username
+        msg1 = "Bienvenue sur Diozik "
+        msg2 = username
+        msg3 = " !"
+        log = username[0].upper() + username[1].upper()
         sign = "Déconnexion"
         if "search_reply" in session:
             search_reply = session['search_reply']
@@ -76,17 +78,64 @@ def home():
                     <script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
                 </head>
                 <body>
-                    <h5>Suggestions :</h5>
-                    <p>Une suggestion.</p>
-                </body>
-            </html>
+                    <h3 class="small_title">Découvrez quelques artistes :</h3>
+                    <div class="suggestions"><center>
             """
+
+            with sql.connect('database/database.db') as con:
+                cur = con.cursor()
+                cur.execute("SELECT account FROM Accounts")
+                usernames = cur.fetchall()
+                cur.execute("SELECT track FROM Tracklist")
+                tracks = cur.fetchall()
+
+                ids = []
+                list_index = []
+
+                for i in range(len(usernames)):
+                    list_index.append(i)
+
+                while len(ids) < 5:
+                    c = random.randint(0, len(usernames) - 1)
+                    if c in list_index:
+                        list_index.remove(c)
+                        ids.append(c)
+
+                for i in range(5):
+                    cur.execute("SELECT username FROM Accounts WHERE account = ?", (usernames[ids[i]][0],))
+                    row = cur.fetchone()[0]
+                    message += f'<a href="{url_for("profile", authorPK=usernames[ids[i]][0], )}"><div class="box artist">' + str(
+                        row) + '</div></a>'
+
+                message += '</center></div><h3 class="small_title">Découvrez quelques musiques :</h3>'
+
+                ids = []
+                list_index = []
+
+                for i in range(len(tracks)):
+                    list_index.append(i)
+
+                while len(ids) < 5:
+                    c = random.randint(0, len(tracks) - 1)
+                    if c in list_index:
+                        list_index.remove(c)
+                        ids.append(c)
+
+                for i in range(5):
+                    t = tracks[ids[i]][0]
+                    t = Track(t)
+                    t.setAll()
+                    message += f'''<a href="{url_for("profile", authorPK=t.getAuthorPK())}"><div class="box music"><i class="fas fa-user"></i>{t.getMusicTitle()} - {t.getAuthor()} </div></a>
+                                    <iframe src="http://127.0.0.1:5000/player/{t.getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>
+                                    '''
+                message += '</body></html>'
 
             f.write(message)
             f.close()
             iframe = url_for('app_default')
             search_reply = ""
-        return render_template("app.html", msg=msg, log=log, sign=sign, iframe=iframe, search_reply=search_reply)
+        return render_template("app.html", msg1=msg1, msg2=msg2, msg3=msg3, log=log, sign=sign, iframe=iframe,
+                               search_reply=search_reply)
     else:
         return render_template("index.html")
     con.close()
@@ -127,7 +176,7 @@ def shop():
             cur.execute("SELECT username FROM Accounts WHERE account=?", (account,))
             username = cur.fetchall()[0][0]
             con.commit()
-        log = username
+        log = username[0].upper() + username[1].upper()
         sign = "Déconnexion"
         if "change_planError" in session:
             msg = session["change_planError"]
@@ -155,15 +204,36 @@ def user():
             cur.execute("SELECT plan_title FROM Plans WHERE plan=?", (plan,))
             plan = cur.fetchall()[0][0]
             con.commit()
-        msg = "Connecté en tant que : " + username + ". Formule : " + plan + "."
-        log = username
+
+        if plan == 'Premium':
+            msg2 = 'Compte ' + plan
+            msg3 = ""
+            msg4 = ""
+        elif plan == 'Essentiel':
+            msg2 = ""
+            msg3 = 'Compte ' + plan
+            msg4 = ""
+        elif plan == 'Student':
+            msg2 = ""
+            msg3 = ""
+            msg4 = 'Compte ' + plan
+
+        msg1 = username
+        log = username[0].upper() + username[1].upper()
         sign = "Déconnexion"
         if "user_iframe" in session:
             iframe = url_for(session["user_iframe"])
         else:
             session["user_iframe"] = "user_edit"
             iframe = url_for(session["user_iframe"])
-        return render_template("user.html", log=log, sign=sign, iframe=iframe, msg=msg)
+        if session["user_iframe"] == "user_edit":
+            iframe_size = 638
+        elif session["user_iframe"] == "user_tracks":
+            iframe_size = 975
+        else:
+            iframe_size = 638
+        return render_template("user.html", log=log, sign=sign, iframe=iframe, msg1=msg1, msg2=msg2, msg3=msg3,
+                               msg4=msg4, iframe_size=iframe_size)
     else:
         session["profile"] = True
         return redirect(url_for("signup"))
@@ -178,7 +248,7 @@ def contact():
             cur.execute("SELECT username FROM Accounts WHERE account=?", (account,))
             username = cur.fetchall()[0][0]
             con.commit()
-        log = username
+        log = username[0].upper() + username[1].upper()
         sign = "Déconnexion"
     else:
         log = "Connexion"
@@ -200,7 +270,7 @@ def about():
             cur.execute("SELECT username FROM Accounts WHERE account=?", (account,))
             username = cur.fetchall()[0][0]
             con.commit()
-        log = username
+        log = username[0].upper() + username[1].upper()
         sign = "Déconnexion"
     else:
         log = "Connexion"
@@ -232,7 +302,7 @@ def cgu_cgv_pdc():
             cur.execute("SELECT username FROM Accounts WHERE account=?", (account,))
             username = cur.fetchall()[0][0]
             con.commit()
-        log = username
+        log = username[0].upper() + username[1].upper()
         sign = "Déconnexion"
     else:
         session["cgu_cgv_pdc"] = True
@@ -419,8 +489,8 @@ def signup_result():
                             if not valid:
                                 msg = "L'adresse mail saisie est invalide."
                             else:
-                                if len(username) < 4 or len(username) > 100:
-                                    msg = "Le nom d'utilisateur doit faire entre 4 et 100 caractères."
+                                if len(username) < 4 or len(username) > 15:
+                                    msg = "Le nom d'utilisateur doit faire entre 4 et 15 caractères."
                                 else:
                                     chars = []
                                     valid = True
@@ -700,19 +770,19 @@ def upload_file():
                                 allowed_filename = True
                         if not error:
                             t = len(music_title)
-                            if 0 < t <= 100:
+                            if 0 < t <= 15:
                                 cur.execute("INSERT INTO Tracklist (music_title,author,filename) VALUES(?, ?, ?)",
                                             (music_title, author, filename))
                                 f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                                 msg = "Fichier correctement téléversé !"
                             else:
-                                msg = "Le nom de votre musique doit faire entre en 0 et 100 caractères."
+                                msg = "Le nom de votre musique doit faire entre en 0 et 15 caractères."
                         else:
                             msg = "Erreur lors de l'enregistrement du fichier"
                         con.commit()
 
                 else:
-                    msg = "Le format du fichier doit faire partie des formats suivants : mp3, wav."
+                    msg = "Votre fichier doit être au format mp3."
             else:
                 msg = "Veuillez choisir un fichier."
 
@@ -746,11 +816,33 @@ def displaytracks(authorPK):
             trackdic[f'{pk}'] = t
         display = ""
         for t in trackdic:
-            display += f'''<figure><figcaption>{trackdic[t].getMusicTitle()} - {trackdic[t].getAuthor()}</figcaption>
-            <audio controls src="/stream/{trackdic[t].getPrimaryKey()}" preload="auto">Votre navigateur ne supporte 
-            pas l'élément <code>audio</code>.</audio></figure> '''
+            display += f'''<iframe src="http://127.0.0.1:5000/player/{trackdic[t].getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>'''
         if trackdic == {}:
-            display = 'Aucune musique...'
+            display = '''
+            <!DOCTYPE html>
+                <html lang="en">
+                    <! -- HEAD -- >
+                    <head>
+                        <meta charset="utf-8">
+                
+                        <link rel="stylesheet" type="text/css" href="/static/css/profile.css">
+                
+                        <link rel="preconnect" href="https://fonts.gstatic.com">
+                        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+                        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+                        <script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
+                    </head>
+                    <! -- HEAD -- >
+                
+                    <! -- BODY -- >
+                    <body id="itsbody">
+                
+                        <h3>Aucunes musiques...</h3>
+                
+                    </body>
+                </html>           
+            
+            '''
         return display
     except:
         return "Erreur lors de l'opération de réception."
@@ -791,82 +883,70 @@ def search_result():
             with sql.connect("database/database.db") as con:
                 cur = con.cursor()
 
-                result = '''
+                result = f'''
                 <html lang="en">
-                <! -- HEAD -- >
-                <head>
-                    <script src="jquery-3.5.1.min.js"></script>
-                    <meta charset="utf-8">
-                    <title> Diozik </title>
-            
-                    <! -- CSS -- >
-                    <!--importation de BULMA-->
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-                    <link rel="icon" href="static/img/icon.ico"/>
-                    <link rel="stylesheet" type="text/css" href="static/css/app.css">
-            
-                    <! -- CSS -- >
-                    
-                    <script src="{{ url_for('static', filename='js/player.js') }}"></script>  
-            
-                    <! -- FONT -- >
-                    <!--Importation des polices-->
-                    <link rel="preconnect" href="https://fonts.gstatic.com">
-                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-                    <script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
-                    <! -- FONT -->
-                </head>
+                    <! -- HEAD -- >
+                    <head>
+                        <meta charset="utf-8">
+                        
+                        <link rel="stylesheet" type="text/css" href="/static/css/app_result.css">
+                
+                        <link rel="preconnect" href="https://fonts.gstatic.com">
+                        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+                        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+                        <script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
+                    </head>
                 <body id = "itsbody">
+                    
                 '''
                 lenr = len(rslt[0]) + len(rslt[1])
                 lene = len(extra[0]) + len(extra[1])
                 if lenr > 0:
-                    result += f'Meilleurs résultats :</br>'
+                    result += f'<div class="big_title">Meilleurs résultats :</div>'
                     if len(rslt[0]) > 0:
-                        result += 'Artistes :</br>'
+                        result += '<h3 class="small_title">Artistes :</h3>'
                         for i in range(len(rslt[0])):
                             cur.execute("SELECT username FROM Accounts WHERE account = ?", (rslt[0][i][0],))
                             row = cur.fetchone()[0]
-                            result += f'<a href="{url_for("profile", authorPK=rslt[0][i][0], )}">' + str(
-                                row) + '</a></br>'
+                            result += f'<a href="{url_for("profile", authorPK=rslt[0][i][0], )}"><div class="box artist">' + str(
+                                row) + '</div></a>'
+                        result += '<div class="block"></div>'
                     if len(rslt[1]) > 0:
-                        result += 'Musiques :</br>'
+                        result += '<h3 class="small_title">Musiques :</h3>'
                         for i in range(len(rslt[1])):
                             t = rslt[1][i][0]
                             t = Track(t)
                             t.setAll()
-                            result += f'''<figure><figcaption>{t.getMusicTitle()} - {t.getAuthor()}</figcaption>
-            <audio controls src="/stream/{t.getPrimaryKey()}" preload="auto">Votre navigateur ne supporte 
-            pas l'élément <code>audio</code>.</audio></figure> '''
+                            result += f'''<a href="{url_for("profile", authorPK=t.getAuthorPK())}"><div class="box music"><i class="fas fa-user"></i>{t.getMusicTitle()} - {t.getAuthor()} </div></a>
+                                        <iframe src="http://127.0.0.1:5000/player/{t.getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>'''
 
                 if lene > 0:
-                    result += f'Résultats pertinents :</br>'
+                    result += f'<div class="big_title">Résultats pertinents :</div>'
                     if len(extra[0]) > 0:
-                        result += 'Artistes :</br>'
+                        result += '<h3 class="small_title">Artistes :</h3>'
                         for i in range(len(extra[0])):
                             cur.execute("SELECT username FROM Accounts WHERE account = ?", (extra[0][i][0],))
                             row = cur.fetchone()[0]
-                            result += f'<a href="{url_for("profile", authorPK=extra[0][i][0], )}">' + str(
-                                row) + '</a></br>'
+                            result += f'<a href="{url_for("profile", authorPK=extra[0][i][0], )}"><div class="box artist">' + str(
+                                row) + '</div></a>'
+                        result += '<div class="block"></div>'
                     if len(extra[1]) > 0:
-                        result += 'Musiques :</br>'
+                        result += '<h3 class="small_title">Musiques :</h3>'
                         for i in range(len(extra[1])):
                             t = extra[1][i][0]
                             t = Track(t)
                             t.setAll()
-                            result += f'''<figure><figcaption>{t.getMusicTitle()} - {t.getAuthor()}</figcaption>
-                                        <audio controls src="/stream/{t.getPrimaryKey()}" preload="auto">Votre navigateur ne supporte 
-                                        pas l'élément <code>audio</code>.</audio></figure> '''
+                            result += f'''<a href="{url_for("profile", authorPK=t.getAuthorPK())}"><div class="box music"><i class="fas fa-user"></i>{t.getMusicTitle()} - {t.getAuthor()} </div></a>
+                                        <iframe src="http://127.0.0.1:5000/player/{t.getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>'''
                 else:
-                    result += f'Aucun résultat pour votre recherche...'
+                    result += f'<h4>Aucun résultat pour votre recherche...</h4>'
 
                 result += '</body></html>'
                 con.commit()
         except:
-            result = "Erreur lors de l'opération de réception."
+            result = "<h4>Erreur lors de l'opération de réception.</h4>"
     else:
-        result = "Aucun résultat pour votre recherche..."
+        result = "<h4>Aucun résultat pour votre recherche...</h4>"
     f.write(result)
     f.close()
     return render_template('app_result.html')
@@ -888,8 +968,6 @@ def stream(trackPK):
     path = "uploads/" + filename
     if file == "mp3":
         return Response(generate(path), mimetype="audio/mp3")
-    elif file == "wav":
-        return Response(generate(path), mimetype="audio/x-wav")
     else:
         return "Erreur lors de la lecture du media : extension non supportée."
 
@@ -1118,10 +1196,11 @@ def save_password():
                         microsecond += c
                     i += 1
 
-                code_time = datetime.datetime(int(year), int(month), int(day), int(hour), int(minute), int(second), int(microsecond), None)
+                code_time = datetime.datetime(int(year), int(month), int(day), int(hour), int(minute), int(second),
+                                              int(microsecond), None)
                 delta = datetime.timedelta(minutes=60)
                 time = datetime.datetime.now()
-                if code_time+delta > time:
+                if code_time + delta > time:
                     if new_password == new_password2:
                         with sql.connect("database/database.db") as con:
                             cur = con.cursor()
@@ -1130,7 +1209,8 @@ def save_password():
                             cur.execute("SELECT password FROM Accounts WHERE account = ?", (account,))
                             password = cur.fetchall()[0][0]
                             if password != new_password:
-                                cur.execute("UPDATE Accounts SET password = ? WHERE account = ?", (new_password, account))
+                                cur.execute("UPDATE Accounts SET password = ? WHERE account = ?",
+                                            (new_password, account))
                                 cur.execute("DELETE FROM Change_Password_Security WHERE code = ?", (code,))
                                 msg = "Modification du mot de passe réalisée avec succès !"
                             else:
@@ -1146,5 +1226,63 @@ def save_password():
             return redirect(url_for('change_password'))
 
 
+@app.route("/player/<int:PK>")
+def player(PK: int):
+    t = Track(PK)
+    t.setAll()
+    f = open('templates/player.html', 'w')
+    message = f'''
+                <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                    
+                        <link rel="stylesheet" type="text/css" href="../static/css/player.css">
+                    
+                        <link rel="preconnect" href="https://fonts.gstatic.com">
+                        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+                        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+                        <script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
+                    
+                        <title>Diozik</title>
+                    </head>
+                    <body>
+                        <div class="music-container" id="music-container">
+                            <div class="music-info">
+                                <h4 id="title"></h4>
+                            </div>
+                    
+                            <audio src="http://127.0.0.1:5000/stream/{PK}" id="audio"></audio>
+                            <div class="navigation">
+                                <button id="play" class="action-btn action-btn-big">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button id="volume" class="action-btn">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                                <input type="range" min="0" max="100" value="50" id="volume-controller">
+                            </div>
+                            <div class="progress-container" id="progress-container">
+                                    <div class="progress" id="progress"></div>
+                            </div>
+                            <div class="timecode">
+                                <h4 id="current-time">0:00</h4>
+                                <h4> / </h4>
+                                <h4 id="duration">0:00</h4>
+                            </div>
+                    
+                            <script src="../static/js/app.js" type="text/javascript"></script>
+                            <script>
+                                loadSong("{t.getMusicTitle()}", "http://127.0.0.1:5000/stream/{PK}");
+                            </script>
+                        </div>
+                    </body>
+                </html>
+                '''
+    f.write(message)
+    f.close()
+    return render_template("player.html")
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="localhost", port=8000, debug=True)
