@@ -126,7 +126,7 @@ def home():
                     t = Track(t)
                     t.setAll()
                     message += f'''<a href="{url_for("profile", authorPK=t.getAuthorPK())}"><div class="box music"><i class="fas fa-user"></i>{t.getMusicTitle()} - {t.getAuthor()} </div></a>
-                                    <iframe src="http://127.0.0.1:5000/player/{t.getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>
+                                    <iframe src="https://diozik.herokuapp.com/player/{t.getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>
                                     '''
                 message += '</body></html>'
 
@@ -816,7 +816,7 @@ def displaytracks(authorPK):
             trackdic[f'{pk}'] = t
         display = ""
         for t in trackdic:
-            display += f'''<iframe src="http://127.0.0.1:5000/player/{trackdic[t].getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>'''
+            display += f'''<iframe src="https://diozik.herokuapp.com/player/{trackdic[t].getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>'''
         if trackdic == {}:
             display = '''
             <!DOCTYPE html>
@@ -918,7 +918,7 @@ def search_result():
                             t = Track(t)
                             t.setAll()
                             result += f'''<a href="{url_for("profile", authorPK=t.getAuthorPK())}"><div class="box music"><i class="fas fa-user"></i>{t.getMusicTitle()} - {t.getAuthor()} </div></a>
-                                        <iframe src="http://127.0.0.1:5000/player/{t.getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>'''
+                                        <iframe src="https://diozik.herokuapp.com/player/{t.getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>'''
 
                 if lene > 0:
                     result += f'<div class="big_title">Résultats pertinents :</div>'
@@ -937,7 +937,7 @@ def search_result():
                             t = Track(t)
                             t.setAll()
                             result += f'''<a href="{url_for("profile", authorPK=t.getAuthorPK())}"><div class="box music"><i class="fas fa-user"></i>{t.getMusicTitle()} - {t.getAuthor()} </div></a>
-                                        <iframe src="http://127.0.0.1:5000/player/{t.getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>'''
+                                        <iframe src="https://diozik.herokuapp.com/player/{t.getPrimaryKey()}" frameborder="0" width="100%" height="95px"></iframe>'''
                 else:
                     result += f'<h4>Aucun résultat pour votre recherche...</h4>'
 
@@ -1029,7 +1029,7 @@ def send():
                     L'Équipe de Diozik
                     diozik.assistance@gmail.com
                     
-                    http://127.0.0.1:5000                    
+                    https://diozik.herokuapp.com/                 
                     '''
 
                     message = MIMEMultipart()
@@ -1109,7 +1109,7 @@ def recovery():
                     Code : (Expirera dans 60 minutes)
                     {code}
                     Modifier votre mot de passe :
-                    http://127.0.0.1:5000/login/change_password
+                    https://diozik.herokuapp.com/login/change_password
                     
                     Si vous n'êtes pas à l'origine de cette demande, veuillez nous le signalé à cette même 
                     adresse mail et modifier votre mot de passe au plus vite. Merci pour votre confiance. 
@@ -1118,7 +1118,7 @@ def recovery():
                     L'Équipe de Diozik
                     diozik.assistance@gmail.com
                     
-                    http://127.0.0.1:5000                    
+                    https://diozik.herokuapp.com/                
                     '''
 
                         port_number = 587
@@ -1252,7 +1252,7 @@ def player(PK: int):
                                 <h4 id="title"></h4>
                             </div>
                     
-                            <audio src="http://127.0.0.1:5000/stream/{PK}" id="audio"></audio>
+                            <audio src="https://diozik.herokuapp.com/stream/{PK}" id="audio"></audio>
                             <div class="navigation">
                                 <button id="play" class="action-btn action-btn-big">
                                     <i class="fas fa-play"></i>
@@ -1273,7 +1273,7 @@ def player(PK: int):
                     
                             <script src="../static/js/app.js" type="text/javascript"></script>
                             <script>
-                                loadSong("{t.getMusicTitle()}", "http://127.0.0.1:5000/stream/{PK}");
+                                loadSong("{t.getMusicTitle()}", "https://diozik.herokuapp.com/stream/{PK}");
                             </script>
                         </div>
                     </body>
