@@ -4,7 +4,6 @@ Prioritaire :
 
 - Parcours d'arbre
 
-- A propos a coder
 - RENDRE LA BOUTIQUE UTILISABLE
 
 - REORGANISEE GITHUB
