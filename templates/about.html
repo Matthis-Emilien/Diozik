@@ -53,9 +53,16 @@
             </header>
         </div>
         <! -- HEADER -- >
-
-        <h1>À propos</h1>
-        <a href="{{ url_for('home') }}">Retourner à l'accueil</a>
+        <div class="back"><a class="link" href="{{ url_for('home') }}"><i class="fas fa-arrow-left"></i> Retourner à l'accueil</a></div>
+        <h1 class="about-title">À propos</h1>
+        <p class="paragraphe">
+            Diozik est détenu par 2 lycéens devant réaliser un projet durant leur année scolaire. Nous sommes les cousins éloignés de Steve Jobs
+            et possédons beaucoup d'argent et c'est pour cela que nous avons décidé de créer Diozik.<br>
+            Diozik est un service de streaming numérique qui propose de la musique, des podcasts et des vidéos, et qui vous offre un accès à
+            des millions de titres et à d'autres contenus d'artistes du monde entier. Les fonctionnalités de base sont totalement gratuites (p. ex., écouter de la musique, en mettre en ligne...),
+            mais vous pouvez également vous abonner à Diozik Premium pour accéder à d'autres fonctionnalités. <br>
+        </p>
+        <p class="paragraphe2">Profitez bien de nos services ;) !<br> L'équipe Diozik.</p>
     </body>
     <footer class="footer">
         <h3 class="footer-text"><a href="{{ url_for('select') }}">CGU &emsp;</a>/ <a href="{{ url_for('select') }}">&emsp;CGV &emsp;</a>/ <a href="{{ url_for('select') }}">&emsp; Politique de Confidentalité </a>&emsp;/ &emsp; <a href="{{ url_for('contact') }}">Contact &emsp;</a>/ <a href="{{ url_for('about') }}">&emsp;À propos</a></h3>
