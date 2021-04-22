@@ -46,7 +46,6 @@
                     </ul>
                     <ul class="sous2">
                         <li><a href="{{ url_for('shop') }}" class="boutique2">Boutique</a></li>
-                        <li><a href="{{ url_for('about') }}">A propos</a></li>
                         <li><a href="{{ url_for('headersign') }}">{{ sign }}</a></li>
                         <li><a href="{{ url_for('headerlog') }}">{{ log }}</a></li>
                     </ul>
@@ -55,18 +54,18 @@
         </div>
         <! -- HEADER -- >
 
-        <h1>Profil</h1>
-
-        {{msg}}
-
-        <ul>
-            <li><a href="{{ url_for('user_edit') }}">Édition du compte</a></li>
-            <li><a href="{{ url_for('user_tracks') }}">Mes musiques</a></li>
+        <h1 class="title">{{msg1}}</h1>
+        <h2 class="msg-title">{{msg2}}</h2>
+        <h2 class="msg-title2">{{msg3}}</h2>
+        <h2 class="msg-title3">{{msg4}}</h2>
+        <ul class="liste">
+            <a href="{{ url_for('user_edit') }}"><li class="li1">Édition du compte</li></a>
+            <a href="{{ url_for('user_tracks') }}"><li class="li2">Mes musiques</li></a>
         </ul>
 
-        <iframe src="{{ iframe }}" frameborder="0" width=100% height=900px></iframe>
+        <iframe src="{{ iframe }}" frameborder="0" width=100% height="{{ iframe_size }}" scrolling="no"></iframe>
 
-        <a href="{{ url_for('home') }}">Retourner à l'accueil</a>
+        <div class="back"><a href="{{ url_for('home') }}" class="home"><i class="fas fa-arrow-left"></i> Retourner à l'accueil</a></div>
     </body>
     <footer class="footer">
         <h3 class="footer-text"><a href="{{ url_for('select') }}">CGU &emsp;</a>/ <a href="{{ url_for('select') }}">&emsp;CGV &emsp;</a>/ <a href="{{ url_for('select') }}">&emsp; Politique de Confidentalité </a>&emsp;/ &emsp; <a href="{{ url_for('contact') }}">Contact &emsp;</a>/ <a href="{{ url_for('about') }}">&emsp;À propos</a></h3>

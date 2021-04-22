@@ -1,0 +1,48 @@
+
+                <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                    
+                        <link rel="stylesheet" type="text/css" href="../static/css/player.css">
+                    
+                        <link rel="preconnect" href="https://fonts.gstatic.com">
+                        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+                        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+                        <script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
+                    
+                        <title>Diozik</title>
+                    </head>
+                    <body>
+                        <div class="music-container" id="music-container">
+                            <div class="music-info">
+                                <h4 id="title"></h4>
+                            </div>
+                    
+                            <audio src="http://127.0.0.1:5000/stream/14" id="audio"></audio>
+                            <div class="navigation">
+                                <button id="play" class="action-btn action-btn-big">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button id="volume" class="action-btn">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                                <input type="range" min="0" max="100" value="50" id="volume-controller">
+                            </div>
+                            <div class="progress-container" id="progress-container">
+                                    <div class="progress" id="progress"></div>
+                            </div>
+                            <div class="timecode">
+                                <h4 id="current-time">0:00</h4>
+                                <h4> / </h4>
+                                <h4 id="duration">0:00</h4>
+                            </div>
+                    
+                            <script src="../static/js/app.js" type="text/javascript"></script>
+                            <script>
+                                loadSong("Drill", "http://127.0.0.1:5000/stream/14");
+                            </script>
+                        </div>
+                    </body>
+                </html>
+                   

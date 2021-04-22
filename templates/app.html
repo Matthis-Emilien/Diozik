@@ -46,7 +46,6 @@
 					</ul>
 					<ul class="sous2">
 						<li><a href="{{ url_for('shop') }}" class="boutique2">Boutique</a></li>
-						<li><a href="{{ url_for('about') }}">A propos</a></li>
 						<li><a href="{{ url_for('headersign') }}">{{ sign }}</a></li>
 						<li><a href="{{ url_for('headerlog') }}">{{ log }}</a></li>
 					</ul>
@@ -55,16 +54,21 @@
 		</div>
         <! -- HEADER -- >
 
-        <h1>Diozik</h1>
-        {{ msg }}
-        <form action="{{ url_for('search') }}" method="POST">
-            <input type="text" name="content" placeholder="Rechercher...">
+        <h1 class="explore"><i class="fas fa-sliders-h"></i> Explorer</h1>
 
-            <input type="submit" value="Rechercher">
-        </form>
+        <div class="bdr">
+            <form class="recherche" action="{{ url_for('search') }}" method="POST">
+                <div class="content-search"><input type="text" name="content" placeholder="Rechercher parmis des milliers de titres et artistes..."></div>
+
+                <div class="content-button"><input type="submit" value="Recherche Diozik"></div>
+            </form>
+        </div>
+
+        <h1 class="message">{{msg1}} <a href="{{ url_for('user') }}" class="text">{{msg2}}</a> {{msg3}}</h1>
+
         <div class="box_content">
             {{ search_reply }}
-            <iframe src="{{ iframe }}" frameborder="0" id="content" width="100%" height="900px"></iframe>
+            <iframe src="{{ iframe }}" frameborder="1" id="content" width="100%" height="1150px"></iframe>
         </div>
     </body>
     <footer class="footer">

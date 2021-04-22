@@ -46,7 +46,6 @@
                     </ul>
                     <ul class="sous2">
                         <li><a href="{{ url_for('shop') }}" class="boutique2">Boutique</a></li>
-                        <li><a href="{{ url_for('about') }}">A propos</a></li>
                         <li><a href="{{ url_for('headersign') }}">{{ sign }}</a></li>
                         <li><a href="{{ url_for('headerlog') }}">{{ log }}</a></li>
                     </ul>
@@ -56,16 +55,18 @@
         <! -- HEADER -- >
 
         <h1>Contact</h1>
-        <a href="{{ url_for('home') }}">Retourner à l'accueil</a>
-        {{ msg }}
+        <div class="back"><a href="{{ url_for('home') }}" class="home"><i class="fas fa-arrow-left"></i> Retourner à l'accueil</a></div>
+        <h1 class="contact-title">Contacter Diozik</h1>
+        <h2 class="msg-title">{{ msg }}</h2>
+
         <form action="{{ url_for('send') }}" method="POST">
-            <label for="mail">Votre adresse mail :</label>
-            <input type = "email" id="mail" name="mail" placeholder="Adresse mail">
-            <label for="subject">Objet de votre message :</label>
-            <input type = "text" id="subject" name="subject" placeholder="Objet de votre message">
-            <label for="content">Votre message :</label>
-            <input type = "text" id="content" name="content" placeholder="Votre message">
-            <input type = "submit" value="Envoyer"/>
+            <div><label for="mail">Votre adresse mail :</label></div>
+            <div class="input-section"><input type = "email" id="mail" name="mail" placeholder="Adresse mail"></div>
+            <div><label for="subject">Objet de votre message :</label></div>
+            <div class="input-section"><input type = "text" id="subject" name="subject" placeholder="Objet de votre message"></div>
+            <div><label for="content">Votre message :</label></div>
+            <div class="message-section"><input type = "text" id="content" name="content" placeholder="Votre message"></div>
+            <div class="submit-section"><input type = "submit" value="Envoyer"/></div>
         </form>
     </body>
     <footer class="footer">

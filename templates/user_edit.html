@@ -1,22 +1,52 @@
-<form action="{{ url_for('user_edit_save') }}" method="POST">
-    {{ msg }}
-    <h3>Édition du profil</h3>
-    Nom d'utilisateur :<br>
-    <input type = "text" name = "username" value="{{ username }}"/></br>
+<!DOCTYPE html>
+<html lang="en">
+    <! -- HEAD -- >
+    <head>
+        <script src="jquery-3.5.1.min.js"></script>
+        <meta charset="utf-8">
+        <title> Diozik </title>
 
-    Adresse mail :<br>
-    <input type = "email" name = "mail" value="{{ mail }}"/></br>
+        <! -- CSS -- >
+        <!--importation de BULMA-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <link rel="icon" href="static/img/icon.ico"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/user_edit.css">
 
-    Mot de passe actuel :<br>
-    <input type = "password" name = "password" placeholder="Entrez votre mot de passe actuel"/></br>
+        <! -- CSS -- >
 
-    <p>Modifier votre mot de passe :</p>
+        <! -- FONT -- >
+        <!--Importation des polices-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
+        <! -- FONT -->
+    </head>
+    <! -- HEAD -- >
 
-    Nouveau mot de passe :<br>
-    <input type = "password" name = "new_password" placeholder="Entrez un nouveau mot de passe"/></br>
+    <! -- BODY -- >
+    <body id="itsbody">
+        <form action="{{ url_for('user_edit_save') }}" method="POST">
 
-    Confirmer le nouveau mot de passe<br>
-    <input type = "password" name = "new_password_2" placeholder="Confirmer le nouveau mot de passe"/></br>
+            <center><div class="edition"><h3 class="titre-part">Édition du compte</h3></div></center>
+            <center><h1 class="form">Nom d'utilisateur :</h1>
+            <div class="champs"><input type = "text" name = "username" value="{{ username }}"/></div>
 
-    <input type = "submit" value = "Enregistrer les modifications" /><br>
-</form>
+            <h1 class="form">Adresse mail :</h1>
+            <div class="champs-close"><input type = "email" name = "mail" value="{{ mail }}" readonly="readonly"/></div>
+
+            <h1 class="form">Mot de passe actuel :</h1>
+            <div class="champs"><input type = "password" name = "password" value="" placeholder="Entrez votre mot de passe actuel"/></div>
+            <p class="modif">Modifier votre mot de passe :</p>
+
+            <h1 class="form">Nouveau mot de passe :</h1>
+            <div class="champs"><input type = "password" name = "new_password" placeholder="Entrez un nouveau mot de passe"/></div>
+
+            <h1 class="form">Confirmer le nouveau mot de passe</h1>
+            <div class="champs"><input type = "password" name = "new_password_2" placeholder="Confirmer le nouveau mot de passe"/></div>
+            <center><h1 class="message-pr">{{ msg }}</h1></center>
+            <div class="champs-input"><input type = "submit" value = "Enregistrer les modifications" /></div></center>
+
+        </form>
+    </body>
+</html>

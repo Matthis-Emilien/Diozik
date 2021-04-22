@@ -10,7 +10,7 @@
         <!--importation de BULMA-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
         <link rel="icon" href="static/img/icon.ico"/>
-        <link rel="stylesheet" type="text/css" href="static/css/user.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/user_tracks.css">
 
         <! -- CSS -- >
 
@@ -27,45 +27,36 @@
     <! -- BODY -- >
     <body id="itsbody">
           <form action = "{{ url_for('upload_file') }}" method = "POST" enctype = "multipart/form-data">
-                <h3>Mes musiques</h3>
-                <p>Publier une musique :</p>
-                {{ msg }}
-                Nom de votre musique :
-                <input type="text" name="music_title" placeholder="Nom de votre musique">
-                Sélectionné votre fichier :
+              <center><div class="my_title"><h1 class="titre-part">Mes musiques</h1></div></center>
+              <h3 class="share">Publier une musique</h3>
+              <center><h2 class="form">Nom de votre musique :</h2></center>
 
-                <div id="file-js-example" class="file has-name">
+                <center><div class="champs"><input type="text" name="music_title" placeholder="Nom de votre musique"></div></center>
+              <center><h2 class="form">Sélectionné votre fichier :</h2></center>
+                <div id="file-js-example" class="file has-name upload">
                      <label class="file-label">
                            <input class="file-input" type="file" name="file">
-                           <span class="file-cta">
-                                 <span class="file-icon">
+                           <span class="cta">
+                                 <span class="icon">
                                        <i class="fas fa-upload"></i>
                                  </span>
-                                 <span class="file-label">
+                                 <span class="label">
                                        Choisir un fichier...
                                  </span>
                            </span>
-                           <span class="file-name">
+                           <span class="name">
                                  Aucun fichier sélectionné
                            </span>
                      </label>
                 </div>
 
-                <script src="./static/js/filename.js"></script>
-                <script>
-                    const fileInput = document.querySelector('#file-js-example input[type=file]');
-                    fileInput.onchange = () => {
-                        if (fileInput.files.length > 0) {
-                            const fileName = document.querySelector('#file-js-example .file-name');
-                            fileName.textContent = fileInput.files[0].name;
-                        }
-                    }
-                </script>
+                <script src="/static/js/filename.js"></script>
 
-                <input type = "submit" value="Téléverser"/>
+                <center><input class="submit-button" type = "submit" value="Téléverser"/></center>
+                <center><h3 class="message-ano">{{ msg }}</h3></center>
           </form>
 
-          <h3>Mes musiques :</h3>
-          <iframe src="{{ url_for('displaytracks', authorPK=session['user']) }}" frameborder="0" width="100%" height="400px"></iframe>
+          <center><h3 class="share">Mes musiques</h3></center>
+          <iframe src="{{ url_for('displaytracks', authorPK=session['user']) }}" frameborder="0" width="100%" height=500px></iframe>
     </body>
 </html>
