@@ -4,21 +4,11 @@ Prioritaire :
 
 - Parcours d'arbre
 
-- CSS acceuil
-- CSS profil
 - A propos a coder
-- CSS page contact
-
-- Changer username par INITIAL (2 premières lettres)
-
-- SUGGESTIONS
-- UPLOAD DES MUSIQUES
 - RENDRE LA BOUTIQUE UTILISABLE
 
 - REORGANISEE GITHUB
 - ÉCRIRE LE README = DOCUMENTATION
-
-- Modifier rapidement les liens dans les mails (mot de passe ooublié, contact...)
 
 Secondaire:
 - Problèmes liés au CSS (boutique...)
