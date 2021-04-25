@@ -2,12 +2,15 @@ CAF:
 
 Prioritaire :
 
-- Parcours d'arbre
+- PARCOURS D'ARBRE
 
 - RENDRE LA BOUTIQUE UTILISABLE
 
 - REORGANISEE GITHUB
 - ÉCRIRE LE README = DOCUMENTATION
+
+- RÉGLER L'ERREUR DE COMPTABILITÉ DU PLAYER ENTRE LES NAVIGATEURS (quitte à supprimer le timecode)
+- VÉRIFIER LA COMPTABILITÉ ENTRE TOUS LES NAVIGATEURS
 
 Secondaire:
 - Problèmes liés au CSS (boutique...)
