@@ -1,4 +1,4 @@
-![Screenshot](image-readme/icon.ico) ![Screenshot](image-readme/red_icon.ico)
+![Screenshot](image-readme/yellow_icon.ico) ![Screenshot](image-readme/red_icon.ico)
 # Diozik
 
 ### _Bienvenue sur Diozik._
