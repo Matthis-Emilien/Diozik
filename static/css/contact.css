@@ -227,6 +227,132 @@ nav ul li .t:hover{
     transform:scale(1.15);
 }
 
+.back{
+    margin-top: 20px;
+    margin-left: 20px;
+    background: rgb(255,215,0);
+    border-radius: 10px;
+    width: 190px;
+    padding:3px;
+    height: 30px;
+    -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
+    -moz-transition: all 0.1s ease-out; /* Firefox */
+    -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
+    -o-transition: all 0.1s ease-out; /* Opera */
+    transition: all 0.1s ease-out;
+}
+
+.back:hover{
+    background: rgb(30,30,30);
+    -webkit-transform:scale(1.04); /* Safari et Chrome */
+    -moz-transform:scale(1.04); /* Firefox */
+    -ms-transform:scale(1.04); /* Internet Explorer 9 */
+    -o-transform:scale(1.04); /* Opera */
+    transform:scale(1.04);
+}
+
+.back:hover .home{
+    color: white;
+}
+
+.home{
+    font-family: 'Montserrat',"",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(10,10,10);
+}
+
+.fas{
+    font-size: 90%;
+}
+
+.contact-title{
+    margin-top: 0px;
+    text-align:center;
+    font-family: 'Montserrat',"",sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    color: rgb(255,215,0);
+}
+
+.msg-title{
+    text-align:center;
+    font-family: 'Montserrat',"",sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: red;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+label{
+    font-family: 'Montserrat',"", sans-serif;
+    color: white;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.input-section input{
+    align-content: center;
+    border-radius: 5px;
+    font-family: 'Montserrat',"", sans-serif;
+    float: left;
+    padding-left: 5px;
+    height: 40px;
+    min-width: 98%;
+    background : rgb(30, 30, 30);
+    border: none;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.message-section input{
+    border-radius: 5px;
+    font-family: 'Montserrat',"", sans-serif;
+    float: left;
+    padding-left: 5px;
+    height: 170px;
+    min-width: 98%;
+    background : rgb(30, 30, 30);
+    border: none;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.submit-section input{
+    border-radius: 5px;
+    font-family: 'Montserrat',"", sans-serif;
+    height: 40px;
+    min-width: 18%;
+    margin-left: 20px;
+    background : rgb(255, 215, 0);
+    border: none;
+    color: rgb(30, 30, 30);
+    font-weight: 700;
+    margin-bottom: 38px;
+    -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
+    -moz-transition: all 0.1s ease-out; /* Firefox */
+    -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
+    -o-transition: all 0.1s ease-out; /* Opera */
+    transition: all 0.1s ease-out;
+}
+
+.submit-section input:hover{
+    cursor: pointer;
+    background: rgb(30,30,30);
+    color: white;
+    -webkit-transform:scale(1.04); /* Safari et Chrome */
+    -moz-transform:scale(1.04); /* Firefox */
+    -ms-transform:scale(1.04); /* Internet Explorer 9 */
+    -o-transform:scale(1.04); /* Opera */
+    transform:scale(1.04);
+}
+
 .footer{
     align-content: center;
     background: #0A0A0A;
@@ -378,130 +504,8 @@ FOOTER
 	HEADER
 	*/
 
-    .back{
-        margin-top: 20px;
-        margin-left: 20px;
-        background: rgb(255,215,0);
-        border-radius: 10px;
-        width: 190px;
-        padding:3px;
-        height: 30px;
-        -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
-        -moz-transition: all 0.1s ease-out; /* Firefox */
-        -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
-        -o-transition: all 0.1s ease-out; /* Opera */
-        transition: all 0.1s ease-out;
-    }
-
-    .back:hover{
-        background: rgb(30,30,30);
-        -webkit-transform:scale(1.04); /* Safari et Chrome */
-        -moz-transform:scale(1.04); /* Firefox */
-        -ms-transform:scale(1.04); /* Internet Explorer 9 */
-        -o-transform:scale(1.04); /* Opera */
-        transform:scale(1.04);
-    }
-
-    .back:hover .home{
-        color: white;
-    }
-
-    .home{
-        font-family: 'Montserrat',"",sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: rgb(10,10,10);
-    }
-
-    .fas{
-        font-size: 90%;
-    }
-
     .contact-title{
         margin-top: -60px;
-        text-align:center;
-        font-family: 'Montserrat',"",sans-serif;
-        font-weight: 700;
-        font-size: 55px;
-        color: rgb(255,215,0);
-    }
-
-    .msg-title{
-        text-align:center;
-        font-family: 'Montserrat',"",sans-serif;
-        font-weight: 300;
-        font-size: 15px;
-        color: red;
-        margin-bottom: 20px;
-        margin-top: -10px;
-    }
-
-    label{
-        font-family: 'Montserrat',"", sans-serif;
-        color: white;
-        margin-left: 20px;
-        font-weight: 700;
-        font-size: 22px;
-    }
-
-    .input-section input{
-        align-content: center;
-        border-radius: 5px;
-        font-family: 'Montserrat',"", sans-serif;
-        float: left;
-        padding-left: 5px;
-        height: 40px;
-        min-width: 98%;
-        background : rgb(30, 30, 30);
-        border: none;
-        color: white;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        margin-left: 15px;
-    }
-
-    .message-section input{
-        border-radius: 5px;
-        font-family: 'Montserrat',"", sans-serif;
-        float: left;
-        padding-left: 5px;
-        height: 170px;
-        min-width: 98%;
-        background : rgb(30, 30, 30);
-        border: none;
-        color: white;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        margin-left: 15px;
-    }
-
-    .submit-section input{
-        border-radius: 5px;
-        font-family: 'Montserrat',"", sans-serif;
-        height: 40px;
-        min-width: 18%;
-        margin-left: 20px;
-        background : rgb(255, 215, 0);
-        border: none;
-        color: rgb(30, 30, 30);
-        font-weight: 700;
-        margin-bottom: 38px;
-        -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
-        -moz-transition: all 0.1s ease-out; /* Firefox */
-        -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
-        -o-transition: all 0.1s ease-out; /* Opera */
-        transition: all 0.1s ease-out;
-    }
-
-    .submit-section input:hover{
-        cursor: pointer;
-        background: rgb(30,30,30);
-        color: white;
-        -webkit-transform:scale(1.04); /* Safari et Chrome */
-        -moz-transform:scale(1.04); /* Firefox */
-        -ms-transform:scale(1.04); /* Internet Explorer 9 */
-        -o-transform:scale(1.04); /* Opera */
-        transform:scale(1.04);
     }
 
 	.footer{
