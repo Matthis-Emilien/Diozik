@@ -1,5 +1,5 @@
-# Diozik
-![Screenshot](image-readme/icon.png)
+# Diozik ![Screenshot](image-readme/icon.ico)
+
 ### _Bienvenue sur Diozik._
 Diozik est un service de streaming numérique qui propose de la musique, des podcasts... Les fonctionnalités sont les suivantes :
 - écouter de la musique
