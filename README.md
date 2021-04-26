@@ -3,6 +3,7 @@
 
 ### _Bienvenue sur Diozik._
 Diozik est un service de streaming numérique qui propose de la musique, des podcasts...
+
 Les fonctionnalités sont les suivantes :
 - écouter de la musique
 - mettre des musiques en ligne
