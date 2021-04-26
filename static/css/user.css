@@ -227,6 +227,138 @@ nav ul li .t:hover{
     transform:scale(1.15);
 }
 
+.title{
+    font-family: 'Montserrat',"", sans-serif;
+    margin-top: 50px;
+    font-size: 55px;
+    text-align: center;
+    color: rgb(255,215,0);
+}
+
+.msg-title{
+    margin-top: -30px;
+    text-align: center;
+    color: #D52727;
+    text-shadow:0 0 2px #D52727, 0 0 1px #D52727, 0 0 8px #D52727;color:#D52727;
+    padding-bottom: 15px;
+}
+
+.msg-title2{
+    margin-top: -10px;
+    text-align: center;
+    color: white;
+    text-shadow:0 0 2px white, 0 0 1px white, 0 0 1px white;color:white;
+    padding-bottom: 0px;
+}
+
+.msg-title3{
+    margin-top: -10px;
+    text-align: center;
+    color: #2773D5;
+    text-shadow:0 0 2px #2773D5, 0 0 1px #2773D5, 0 0 1px #2773D5;color:#2773D5;
+    padding-bottom: 0px;
+}
+
+.liste{
+    padding: 5px;
+    width: 50%;
+    margin-top: 40px;
+    margin-left: 25%;
+    margin-bottom: 30px;
+    font-family: 'Montserrat',"", sans-serif;
+    color: yellow;
+    background: rgb(30,30,30);
+    border-radius: 10px;
+}
+
+.liste .li1{
+    background: rgb(30,30,30);
+    padding: 15px;
+    margin: 10px;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+    border: 2px solid rgb(255,215,0);
+    border-radius: 10px;
+    -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
+    -moz-transition: all 0.1s ease-out; /* Firefox */
+    -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
+    -o-transition: all 0.1s ease-out; /* Opera */
+    transition: all 0.1s ease-out;
+}
+
+.liste .li2{
+    background: rgb(30,30,30);
+    padding: 15px;
+    margin: 10px;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+    border: 2px solid rgb(255,215,0);
+    border-radius: 10px;
+    -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
+    -moz-transition: all 0.1s ease-out; /* Firefox */
+    -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
+    -o-transition: all 0.1s ease-out; /* Opera */
+    transition: all 0.1s ease-out;
+}
+
+.liste .li1:hover{
+    background: rgb(255,215,0);
+    color: rgb(10,10,10);
+    -webkit-transform:scale(0.99); /* Safari et Chrome */
+    -moz-transform:scale(0.99); /* Firefox */
+    -ms-transform:scale(0.99); /* Internet Explorer 9 */
+    -o-transform:scale(0.99); /* Opera */
+    transform:scale(0.99);
+}
+
+.liste .li2:hover{
+    background: rgb(255,215,0);
+    color: rgb(10,10,10);
+    -webkit-transform:scale(0.99); /* Safari et Chrome */
+    -moz-transform:scale(0.99); /* Firefox */
+    -ms-transform:scale(0.99); /* Internet Explorer 9 */
+    -o-transform:scale(0.99); /* Opera */
+    transform:scale(0.99);
+}
+
+.back{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background: rgb(255,215,0);
+    border-radius: 10px;
+    width: 190px;
+    padding:3px;
+    height: 30px;
+    -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
+    -moz-transition: all 0.1s ease-out; /* Firefox */
+    -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
+    -o-transition: all 0.1s ease-out; /* Opera */
+    transition: all 0.1s ease-out;
+}
+
+.back:hover{
+    background: rgb(30,30,30);
+    -webkit-transform:scale(1.04); /* Safari et Chrome */
+    -moz-transform:scale(1.04); /* Firefox */
+    -ms-transform:scale(1.04); /* Internet Explorer 9 */
+    -o-transform:scale(1.04); /* Opera */
+    transform:scale(1.04);
+}
+
+.back:hover .home{
+    color: white;
+}
+
+.home{
+    font-family: 'Montserrat',"",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(10,10,10);
+}
+
+
 .footer{
     align-content: center;
     background: #0A0A0A;
@@ -378,136 +510,6 @@ FOOTER
 	HEADER
 	*/
 
-	.title{
-	    font-family: 'Montserrat',"", sans-serif;
-	    margin-top: 50px;
-	    font-size: 55px;
-	    text-align: center;
-	    color: rgb(255,215,0);
-	}
-
-	.msg-title{
-	    margin-top: -30px;
-	    text-align: center;
-	    color: #D52727;
-	    text-shadow:0 0 2px #D52727, 0 0 1px #D52727, 0 0 8px #D52727;color:#D52727;
-	    padding-bottom: 15px;
-	}
-
-	.msg-title2{
-        margin-top: -10px;
-	    text-align: center;
-	    color: white;
-	    text-shadow:0 0 2px white, 0 0 1px white, 0 0 1px white;color:white;
-	    padding-bottom: 0px;
-	}
-
-	.msg-title3{
-	    margin-top: -10px;
-	    text-align: center;
-	    color: #2773D5;
-	    text-shadow:0 0 2px #2773D5, 0 0 1px #2773D5, 0 0 1px #2773D5;color:#2773D5;
-	    padding-bottom: 0px;
-	}
-
-    .liste{
-        padding: 5px;
-        width: 50%;
-        margin-top: 40px;
-        margin-left: 25%;
-        margin-bottom: 30px;
-        font-family: 'Montserrat',"", sans-serif;
-        color: yellow;
-        background: rgb(30,30,30);
-        border-radius: 10px;
-    }
-
-    .liste .li1{
-        background: rgb(30,30,30);
-        padding: 15px;
-        margin: 10px;
-        color: white;
-        font-weight: 900;
-        font-size: 16px;
-        border: 2px solid rgb(255,215,0);
-        border-radius: 10px;
-        -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
-        -moz-transition: all 0.1s ease-out; /* Firefox */
-        -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
-        -o-transition: all 0.1s ease-out; /* Opera */
-        transition: all 0.1s ease-out;
-    }
-
-    .liste .li2{
-        background: rgb(30,30,30);
-        padding: 15px;
-        margin: 10px;
-        color: white;
-        font-weight: 900;
-        font-size: 16px;
-        border: 2px solid rgb(255,215,0);
-        border-radius: 10px;
-        -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
-        -moz-transition: all 0.1s ease-out; /* Firefox */
-        -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
-        -o-transition: all 0.1s ease-out; /* Opera */
-        transition: all 0.1s ease-out;
-    }
-
-    .liste .li1:hover{
-        background: rgb(255,215,0);
-        color: rgb(10,10,10);
-        -webkit-transform:scale(0.99); /* Safari et Chrome */
-        -moz-transform:scale(0.99); /* Firefox */
-        -ms-transform:scale(0.99); /* Internet Explorer 9 */
-        -o-transform:scale(0.99); /* Opera */
-        transform:scale(0.99);
-    }
-
-    .liste .li2:hover{
-        background: rgb(255,215,0);
-        color: rgb(10,10,10);
-        -webkit-transform:scale(0.99); /* Safari et Chrome */
-        -moz-transform:scale(0.99); /* Firefox */
-        -ms-transform:scale(0.99); /* Internet Explorer 9 */
-        -o-transform:scale(0.99); /* Opera */
-        transform:scale(0.99);
-    }
-
-	.back{
-        margin-bottom: 20px;
-        margin-left: 20px;
-        background: rgb(255,215,0);
-        border-radius: 10px;
-        width: 190px;
-        padding:3px;
-        height: 30px;
-        -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
-        -moz-transition: all 0.1s ease-out; /* Firefox */
-        -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
-        -o-transition: all 0.1s ease-out; /* Opera */
-        transition: all 0.1s ease-out;
-    }
-
-    .back:hover{
-        background: rgb(30,30,30);
-        -webkit-transform:scale(1.04); /* Safari et Chrome */
-        -moz-transform:scale(1.04); /* Firefox */
-        -ms-transform:scale(1.04); /* Internet Explorer 9 */
-        -o-transform:scale(1.04); /* Opera */
-        transform:scale(1.04);
-    }
-
-    .back:hover .home{
-        color: white;
-    }
-
-    .home{
-        font-family: 'Montserrat',"",sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: rgb(10,10,10);
-    }
 
     .footer{
         position: relative;
