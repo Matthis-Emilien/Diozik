@@ -1,5 +1,6 @@
 #itsbody{
     background: rgb(10,10,10);
+    height: 1920px;
 }
 
 /*
@@ -406,6 +407,11 @@ FOOTER
 }
 
 @media (min-width: 1024px) {
+
+    #itsbody{
+        height: 1080px;
+    }
+
 	/*
 	HEADER
 	*/
