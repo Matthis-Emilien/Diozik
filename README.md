@@ -1,3 +1,3 @@
-# Diozik
+### Diozik
 ![Screenshot](image-readme/icon.png)
-Bienvenue sur Diozik.
+# Bienvenue sur Diozik.
