@@ -1267,8 +1267,6 @@ def player(PK: int):
                             </div>
                             <div class="timecode">
                                 <h4 id="current-time">0:00</h4>
-                                <h4> / </h4>
-                                <h4 id="duration">0:00</h4>
                             </div>
                     
                             <script src="../static/js/app.js" type="text/javascript"></script>
