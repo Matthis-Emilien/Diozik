@@ -1,3 +1,3 @@
 # Diozik
-![Screenshot](icon.png)
+![Screenshot](image-readme/icon.png)
 Bienvenue sur Diozik.
