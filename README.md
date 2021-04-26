@@ -13,6 +13,6 @@ Les fonctionnalités sont les suivantes :
 
 **Il y a plusieurs manières de procéder afin d'accéder à l'application.**
 
-- Dans un premier temps, on peut naviguer sur celle-ci via le lien suivant héberger à l'aide de Heroku :
+- Dans un premier temps, on peut naviguer sur celle-ci via le lien suivant ramenant au site héberger à l'aide de Heroku :
 
-**ACCEDER A DIOZIK ICI** (https://diozik.herokuapp.com)
+    **ACCEDER A DIOZIK ICI** (https://diozik.herokuapp.com)
