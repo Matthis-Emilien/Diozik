@@ -15,4 +15,4 @@ Les fonctionnalités sont les suivantes :
 
 - Dans un premier temps, on peut naviguer sur celle-ci via le lien suivant héberger à l'aide de Heroku :
 
-**DIOZIK HEBERGER** (https://diozik.herokuapp.com)
+**ACCEDER A DIOZIK ICI** (https://diozik.herokuapp.com)
