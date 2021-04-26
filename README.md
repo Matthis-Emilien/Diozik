@@ -14,4 +14,5 @@ Les fonctionnalités sont les suivantes :
 **Il y a plusieurs manières de procéder afin d'accéder à l'application.**
 
 - Dans un premier temps, on peut naviguer sur celle-ci via le lien suivant héberger à l'aide de Heroku :
-* [DIOZIK] (https://diozik.herokuapp.com)
+
+**DIOZIK HEBERGER** (https://diozik.herokuapp.com)
