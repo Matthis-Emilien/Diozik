@@ -1,5 +1,6 @@
 #itsbody{
     background: rgb(10,10,10);
+    height: 1920px;
 }
 
 /*
@@ -452,7 +453,6 @@ FOOTER
         font-weight: 700;
         font-size: 18px;
         margin: 40px;
-    	margin-bottom: 100px;
         color: rgb(255,215,0);
         padding: 5px;
         line-height: 1.5;
