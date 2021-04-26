@@ -16,6 +16,8 @@ Prioritaire :
 
 - LIENS DANS CGU-CGV-PDC
 
+- FAIRE QUELQUE CHOSE UN MINIMUM RESPONSIVE (CERTAINES PAGES PERDENT UNE GRANDE PARTIE DE LEUR CSS SOUS 1024px)
+
 Secondaire:
 - Problèmes liés au CSS (boutique...)
 - Bouton retourner a l'acceuil lors du paiement
