@@ -6,6 +6,10 @@
     margin-bottom: 20px;
 }
 
+p{
+    text-align: justify;
+}
+
 .enumeration{
     font-family: 'Montserrat',"",sans-serif;
     font-weight: 500;
