@@ -4,6 +4,8 @@ Prioritaire :
 
 - PARCOURS D'ARBRE
 
+- RÉPARER LE À PROPOS
+
 - RENDRE LA BOUTIQUE UTILISABLE
 
 - REORGANISEE GITHUB
@@ -12,6 +14,8 @@ Prioritaire :
 - RÉGLER L'ERREUR DE COMPTABILITÉ DU PLAYER ENTRE LES NAVIGATEURS (quitte à supprimer le timecode)
 - VÉRIFIER LA COMPTABILITÉ ENTRE TOUS LES NAVIGATEURS
 
+- LIENS DANS CGU-CGV-PDC
+
 Secondaire:
 - Problèmes liés au CSS (boutique...)
 - Bouton retourner a l'acceuil lors du paiement
@@ -19,6 +23,7 @@ Secondaire:
 - Finitions de la page home (image formules, button commencer [hover])
 - Ajouter la possibilité de supprimer son compte
 - Ajouter la possibilité de supprimer ou renommer sa/ses musiques
+- Corriger erreur erreur ifram sur user.html
 
 Bonus:
 - Confirmation email lors d'inscription
