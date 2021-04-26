@@ -252,6 +252,95 @@ box_content{
     width: 100%;
 }
 
+.explore{
+	    color: rgb(255,215,0);
+        font-weight: 900;
+        font-family: 'Montserrat',"", sans-serif;
+        font-size: 65px;
+        margin-left: 23px;
+        padding-top: 7px;
+        text-align: center;
+        margin-bottom: 15px;
+}
+
+.fas{
+    font-size: 90%
+}
+
+.message{
+    background: rgb(10,10,10);
+    text-align: center;
+    font-family: 'Montserrat',"", sans-serif;
+    color: white;
+    font-size:14px;
+    position: relative;
+}
+
+.text{
+    color: rgb(255,215,0);
+    text-shadow:0 0 2px rgb(255,215,0), 0 0 1px rgb(255,215,0), 0 0 8px rgb(255,215,0);color:rgb(255,215,0);
+    font-family: 'Montserrat',"", sans-serif;
+    text-decoration: none;
+}
+
+.recherche{
+    display : block;
+    position: relative;
+}
+
+.recherche .content-search input{
+    border-radius: 5px;
+    font-family: 'Montserrat',"", sans-serif;
+    float: left;
+    padding-left: 5px;
+    height: 40px;
+    min-width: 65%;
+    margin-left: 30px;
+    background : rgb(30, 30, 30);
+    border: none;
+    color: white;
+}
+
+.recherche .content-search input::placeholder{
+    color: #9E9E9E;
+}
+
+.recherche .content-button input{
+    border-radius: 5px;
+    font-family: 'Montserrat',"", sans-serif;
+    float: right;
+    margin-right: 35px;
+    height: 40px;
+    min-width: 18%;
+    background : rgb(255, 215, 0);
+    border: none;
+    color: rgb(30, 30, 30);
+    font-weight: 700;
+    -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
+    -moz-transition: all 0.1s ease-out; /* Firefox */
+    -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
+    -o-transition: all 0.1s ease-out; /* Opera */
+    transition: all 0.1s ease-out;
+}
+
+.recherche .content-button input:hover{
+    cursor: pointer;
+    -webkit-transform:scale(1.04); /* Safari et Chrome */
+    -moz-transform:scale(1.04); /* Firefox */
+    -ms-transform:scale(1.04); /* Internet Explorer 9 */
+    -o-transform:scale(1.04); /* Opera */
+    transform:scale(1.04);
+    background: rgb(30,30,30);
+    color : white;
+}
+
+.bdr{
+    min-width: 100%;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    position: relative;
+}
+
 .footer{
     align-content: center;
     background: #0A0A0A;
@@ -285,6 +374,8 @@ box_content{
 FOOTER
 */
 
+
+
 @media (min-width: 830px) {
     .footer{
         position: relative;
@@ -308,6 +399,10 @@ FOOTER
 	/*
 	HEADER
 	*/
+	.recherche .content-search input{
+	    min-width: 75%;
+	}
+
 	.header {
 		width: 100%;
 		margin-left: 0;
@@ -402,94 +497,6 @@ FOOTER
 	/*
 	HEADER
 	*/
-	.explore{
-	    color: rgb(255,215,0);
-        font-weight: 900;
-        font-family: 'Montserrat',"", sans-serif;
-        font-size: 65px;
-        margin-left: 23px;
-        padding-top: 7px;
-        text-align: center;
-        margin-bottom: 15px;
-	}
-
-	.fas{
-        font-size: 90%
-    }
-
-	.message{
-        background: rgb(10,10,10);
-        text-align: center;
-        font-family: 'Montserrat',"", sans-serif;
-        color: white;
-        font-size:14px;
-        position: relative;
-    }
-
-    .text{
-        color: rgb(255,215,0);
-        text-shadow:0 0 2px rgb(255,215,0), 0 0 1px rgb(255,215,0), 0 0 8px rgb(255,215,0);color:rgb(255,215,0);
-        font-family: 'Montserrat',"", sans-serif;
-        text-decoration: none;
-    }
-
-    .recherche{
-        display : block;
-        position: relative;
-    }
-
-    .recherche .content-search input{
-        border-radius: 5px;
-        font-family: 'Montserrat',"", sans-serif;
-        float: left;
-        padding-left: 5px;
-        height: 40px;
-        min-width: 75%;
-        margin-left: 30px;
-        background : rgb(30, 30, 30);
-        border: none;
-        color: white;
-    }
-
-    .recherche .content-search input::placeholder{
-        color: #9E9E9E;
-    }
-
-    .recherche .content-button input{
-        border-radius: 5px;
-        font-family: 'Montserrat',"", sans-serif;
-        float: right;
-        margin-right: 35px;
-        height: 40px;
-        min-width: 18%;
-        background : rgb(255, 215, 0);
-        border: none;
-        color: rgb(30, 30, 30);
-        font-weight: 700;
-        -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
-        -moz-transition: all 0.1s ease-out; /* Firefox */
-        -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
-        -o-transition: all 0.1s ease-out; /* Opera */
-        transition: all 0.1s ease-out;
-    }
-
-    .recherche .content-button input:hover{
-        cursor: pointer;
-        -webkit-transform:scale(1.04); /* Safari et Chrome */
-        -moz-transform:scale(1.04); /* Firefox */
-        -ms-transform:scale(1.04); /* Internet Explorer 9 */
-        -o-transform:scale(1.04); /* Opera */
-        transform:scale(1.04);
-        background: rgb(30,30,30);
-        color : white;
-    }
-
-    .bdr{
-        min-width: 100%;
-        padding-bottom: 50px;
-        padding-top: 10px;
-        position: relative;
-    }
 
     .footer{
         position: relative;
