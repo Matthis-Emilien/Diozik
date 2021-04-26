@@ -16,7 +16,7 @@ body{
         text-align: center;
         font-size: 20px;
         font-weight: 300;
-        margin-bottom: -5px;
+        margin-bottom: 10px;
 }
 
 .artist{
@@ -40,7 +40,7 @@ body{
     border-radius: 10px;
     text-align: center;
     color: rgb(255,255,255);
-    text-decoration: none;
+    text-decoration: none!important;
     -webkit-transition: all 0.3s ease-out; /* Safari et Chrome */
     -moz-transition: all 0.3s ease-out; /* Firefox */
     -ms-transition: all 0.3s ease-out; /* Internet Explorer 9 */
@@ -87,6 +87,7 @@ body{
 
     .small_title{
         text-align: left;
+        margin-bottom: -5px;
     }
 
     .artist{
