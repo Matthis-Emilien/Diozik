@@ -8,10 +8,8 @@ const audio = document.getElementById('audio');
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 const timeStatus = document.getElementById('current-time');
-const durationStatus = document.getElementById('duration');
 
 timeStatus.innerText = "0:00";
-durationStatus.innerText = "0:00";
 
 // Update song details
 function loadSong(song, link){
@@ -19,32 +17,9 @@ function loadSong(song, link){
     audio.src = link;
 }
 
-
-// Set Time Info
+// Set Current Time Info
 function currentTimeStatus(e){
     const { duration, currentTime } = e.srcElement;
-
-    let minutes = Math.round(duration / 60);
-    let secondes = duration / 60 - minutes;
-
-    if (secondes < 0) {
-        secondes = 1 - (secondes - (secondes * 2));
-        minutes = minutes - 1
-    }
-
-    secondes = secondes * 0.6;
-
-    if (secondes >= 0.595) {
-        secondes = 0;
-        minutes = minutes + 1;
-    }
-    minutes = minutes.toString()
-    secondes = secondes * 100
-    secondesDisplay = secondes.toFixed(0).toString()
-    if (secondes.toFixed(0) < 10){
-        secondesDisplay = "0" + secondesDisplay
-    }
-    let convertDuration = minutes + ":" + secondesDisplay;
 
     let min = Math.round(currentTime / 60);
     let sec = currentTime / 60 - min;
@@ -69,7 +44,35 @@ function currentTimeStatus(e){
     let convertTime = min + ":" + secDisplay;
 
     timeStatus.innerText = convertTime;
-    durationStatus.innerText = convertDuration;
+}
+
+// Set Current Time Info
+function currentTimeStatus(e){
+    const { duration, currentTime } = e.srcElement;
+
+    let min = Math.round(currentTime / 60);
+    let sec = currentTime / 60 - min;
+
+    if (sec < 0) {
+        sec = 1 - (sec - (sec * 2));
+        min = min - 1
+    }
+
+    sec = sec * 0.6;
+
+    if (sec >= 0.595) {
+        sec = 0;
+        min = min + 1;
+    }
+    min = min.toString()
+    sec = sec * 100
+    secDisplay = sec.toFixed(0).toString()
+    if (sec.toFixed(0) < 10){
+        secDisplay = "0" + secDisplay
+    }
+    let convertTime = min + ":" + secDisplay;
+
+    timeStatus.innerText = convertTime;
 }
 
 // Play Song
