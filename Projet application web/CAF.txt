@@ -2,24 +2,10 @@ CAF:
 
 Prioritaire :
 
-- PARCOURS D'ARBRE
-
-- RENDRE LA BOUTIQUE UTILISABLE
-- ADAPTER LA PAGE DE PAIEMENT À SAFARI
-
 - REORGANISEE GITHUB
 - ÉCRIRE LE README = DOCUMENTATION
 
 - VÉRIFIER LA COMPTABILITÉ ENTRE TOUS LES NAVIGATEURS
 
 Secondaire:
-- Problèmes liés au CSS (boutique...)
 - Bouton retourner a l'acceuil lors du paiement
-- Créer un GITIGNORE
-- Finitions de la page home (image formules, button commencer [hover])
-- Ajouter la possibilité de supprimer son compte
-- Ajouter la possibilité de supprimer ou renommer sa/ses musiques
-- Corriger erreur erreur ifram sur user.html
-
-Bonus:
-- Confirmation email lors d'inscription
