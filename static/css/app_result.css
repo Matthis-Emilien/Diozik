@@ -18,7 +18,7 @@ body{
     text-align: center;
     font-size: 20px;
     font-weight: 300;
-    margin-bottom: -5px;
+    margin-bottom: 10px;
 }
 
 .block{
@@ -104,6 +104,7 @@ h4{
 
     .small_title{
         text-align: left;
+        margin-bottom: -5px;
     }
 
     .artist{
