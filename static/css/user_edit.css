@@ -23,67 +23,65 @@
     margin-top: 10px;
 }
 
-@media (min-width: 1024px){
-    .form{
-        font-family: 'Montserrat',"", sans-serif;
-        font-weight: 300;
-        margin-left: 10px;
-        font-size: 22px;
-        color: white;
-        margin-top: 20px;
-    }
+.form{
+    font-family: 'Montserrat',"", sans-serif;
+    font-weight: 300;
+    margin-left: 10px;
+    font-size: 22px;
+    color: white;
+    margin-top: 20px;
+}
 
-    .champs input{
-        width: 40%;
-        height:40px;
-        text-align: center;
-        border: none;
-        border-radius: 10px;
-        background: rgb(30,30,30);
-        color: rgb(255,215,0)
-    }
+.champs input{
+    width: 40%;
+    height:40px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background: rgb(30,30,30);
+    color: rgb(255,215,0)
+}
 
-    .champs-close input{
-        width: 40%;
-        height:40px;
-        text-align: center;
-        border: none;
-        border-radius: 10px;
-        background: rgb(20,20,20);
-        color: rgb(255,215,0);
-        opacity: 0.8;
-        cursor: not-allowed;
-    }
+.champs-close input{
+    width: 40%;
+    height:40px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background: rgb(20,20,20);
+    color: rgb(255,215,0);
+    opacity: 0.8;
+    cursor: not-allowed;
+}
 
-    .champs-input input{
-        border: none;
-        background : rgb(255, 215, 0);
-        border-radius: 10px;
-        margin-top: 10px;
-        color: rgb(10,10,10);
-        width: 15%;
-        height: 40px;
-        cursor: pointer;
-        font-family: 'Montserrat',"", sans-serif;
-        font-weight: 700;
-        font-size: 9px;
-        margin-bottom: 30px;
-        -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
-        -moz-transition: all 0.1s ease-out; /* Firefox */
-        -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
-        -o-transition: all 0.1s ease-out; /* Opera */
-        transition: all 0.1s ease-out;
-    }
+.champs-input input{
+    border: none;
+    background : rgb(255, 215, 0);
+    border-radius: 10px;
+    margin-top: 10px;
+    color: rgb(10,10,10);
+    width: 15%;
+    height: 40px;
+    cursor: pointer;
+    font-family: 'Montserrat',"", sans-serif;
+    font-weight: 700;
+    font-size: 9px;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
+    -moz-transition: all 0.1s ease-out; /* Firefox */
+    -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
+    -o-transition: all 0.1s ease-out; /* Opera */
+    transition: all 0.1s ease-out;
+}
 
-    .champs-input input:hover{
-        color: white;
-        background:rgb(30,30,30);
-        -webkit-transform:scale(1.04); /* Safari et Chrome */
-        -moz-transform:scale(1.04); /* Firefox */
-        -ms-transform:scale(1.04); /* Internet Explorer 9 */
-        -o-transform:scale(1.04); /* Opera */
-        transform:scale(1.04);
-    }
+.champs-input input:hover{
+    color: white;
+    background:rgb(30,30,30);
+    -webkit-transform:scale(1.04); /* Safari et Chrome */
+    -moz-transform:scale(1.04); /* Firefox */
+    -ms-transform:scale(1.04); /* Internet Explorer 9 */
+    -o-transform:scale(1.04); /* Opera */
+    transform:scale(1.04);
 }
 
 @media (min-width: 1250px){
