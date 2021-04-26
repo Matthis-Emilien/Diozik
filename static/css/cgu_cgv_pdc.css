@@ -244,8 +244,35 @@ nav ul li .t:hover{
     position: relative;
 }
 
-@media (min-width: 830px){
-    
+.tabs{
+        margin-top: 80px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+.tabs .choose{
+    background: white;
+    border: 1px solid black;
+}
+
+.tabs i{
+    color: #0A0A0A;
+}
+
+.tabs .text{
+    font-family: 'Montserrat',"",sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    text-shadow:0 0 0px rgb(255,215,0), 0 0 0px rgb(255,215,0), 0 0 1px rgb(255,215,0);color:rgb(255,215,0);
+}
+
+.frame1{
+    margin-left: 15%;
+    margin-right: 20%;
+    min-width: 70%;
+    height: 100%;
+    position: absolute;
+    overflow:hidden;
 }
 
 @media (min-width: 1024px) {
@@ -345,38 +372,9 @@ nav ul li .t:hover{
     }
 
     /* FIN HEADER */
-    
-    .tabs{
-        margin-top: 80px;
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    .tabs .choose{
-        background: white;
-        border: 1px solid black;
-    }
-
-    .tabs i{
-        color: #0A0A0A;
-    }
 
     .tabs .text{
-        font-family: 'Montserrat',"",sans-serif;
-        font-weight: 900;
         font-size: 20px;
-        text-shadow:0 0 0px rgb(255,215,0), 0 0 0px rgb(255,215,0), 0 0 1px rgb(255,215,0);color:rgb(255,215,0);
     }
 
-    .frame1{
-        margin-left: 15%;
-        margin-right: 20%;
-        min-width: 70%;
-        height: 100%;
-        position: absolute;
-        overflow:hidden;
-    }
-
-@media (min-width: 1250px) {
-    
 }
