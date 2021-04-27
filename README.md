@@ -28,6 +28,7 @@ _Prérequis : Python 3 https://docs.python.org/3/index.html_
 - Deuxièmement, pour démarrer l'application via le code source, voici la procédure :
 
    1. Installer Flask
+      
       Pour utiliser l'application, il est nécessaire d'installer **Flask**.
       
       Commencez par créer un dossier qui contiendra l'application web.
@@ -67,6 +68,11 @@ _Prérequis : Python 3 https://docs.python.org/3/index.html_
       Pour plus d'informations à propos de l'installation de **Flask**, vous pouvez consultez la documentation ici : https://flask.palletsprojects.com/en/1.1.x/installation/#install-flask
 
    2. Télécharger l'application
+      
+      Une fois Flask installé, vous pouvez télécharger le code source de l'application. **Attention !** Le code source utilisable en local n'est pas exactement le même que le code source hébergé sur https://diozik.herokuapp.com/. Pour une utilisation optimale, quelques modifications ont été apporté auc fichiers utilisés par Heroku. De plus, certains fichiers sont nécessaire pour l'hébergement, mais ne sont d'aucune utilités pour une un démarrage en local. Ainsi, les fichiers à télécharger sont ceux du dossier `sourcecode`.
+      
+      Téléchargez l'ensemble des fichers du dossier `sourcecode` que vous placerez dans le dossier créer précédemment.
+      
    3. Démarrer l'application
       - Téléchargez l'archive du projet (Project.rar)
       - Extraire l'archive
