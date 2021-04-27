@@ -1,0 +1,67 @@
+.music-container{
+    background-color: rgb(30,30,30);
+    border-radius: 15px;
+    display: flex;
+    height: 60px;
+    font-family : "Montserrat";
+    padding: 0px 20px;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin: 0px;
+}
+
+.action-btn {
+    background-color: rgb(30,30,30);
+    border: 0;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 20px #fff;
+}
+
+.action-btn.action-btn-big {
+    font-size: 20px;
+    color: rgb(255, 215, 0);
+}
+
+.action-btn:focus {
+    outline: none;
+}
+
+.music-info{
+    font-size: 15px;
+    width: 15%;
+    color: #fff;
+}
+
+.progress-container{
+    border-radius: 5px;
+    background-color: rgb(20,20,20);
+    cursor: pointer;
+    margin: 27px 15px;
+    height: 6px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress{
+    background-color: #fff;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width .1s linear;
+}
+
+.timecode{
+    font-size: 15px;
+    width: 5%;
+    color: #fff;
+    display: flex;
+}

@@ -1,0 +1,78 @@
+body{
+    color: #fff;
+    font-family: "Montserrat";
+}
+
+h1{
+    font-size: 70px;
+    text-align: center;
+    font-weight: 900;
+}
+
+h2{
+    margin-left: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: -5px;
+}
+
+h3{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: #9E9E9E;
+}
+
+.music{
+    font-weight: 700;
+    font-size:15px;
+    background: rgb(30,30,30);
+}
+
+.box{
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(255,255,255);
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-out; /* Safari et Chrome */
+    -moz-transition: all 0.3s ease-out; /* Firefox */
+    -ms-transition: all 0.3s ease-out; /* Internet Explorer 9 */
+    -o-transition: all 0.3s ease-out; /* Opera */
+    transition: all 0.3s ease-out;
+}
+
+.box:hover{
+    -webkit-transform:scale(1.03); /* Safari et Chrome */
+    -moz-transform:scale(1.03); /* Firefox */
+    -ms-transform:scale(1.03); /* Internet Explorer 9 */
+    -o-transform:scale(1.03); /* Opera */
+    transform:scale(1.03);
+    color: white;
+
+}
+
+.music i{
+    margin: 0px 10px 0px 5px;
+    color: rgb(255,215,0);
+}
+
+.music:hover i{
+    color: #fff;
+}
+
+.music:hover{
+    background: rgb(255,215,0);
+    transition: 0.2s all ease;
+    color: #fff;
+}
+
+@media (min-width:1024px){
+
+    .music{
+        float: left;
+        margin: 30px 10px 3px;
+        padding: 10px;
+    }
+}

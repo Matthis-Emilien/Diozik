@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <! -- HEAD -- >
+    <head>
+        <script src="jquery-3.5.1.min.js"></script>
+        <meta charset="utf-8">
+        <title> Diozik </title>
+
+        <! -- CSS -- >
+        <!--importation de BULMA-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <link rel="icon" href="static/img/icon.ico"/>
+        <link rel="stylesheet" type="text/css" href="static/css/about.css">
+
+        <! -- CSS -- >
+
+        <! -- FONT -- >
+        <!--Importation des polices-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
+        <! -- FONT -->
+    </head>
+    <! -- HEAD -- >
+
+    <! -- BODY -- >
+    <body id="itsbody">
+        <div class="block" >
+            <header class="header">
+                <center class="pc"><a href="{{ url_for('home') }}" class="header-logo2"> <img src="static/img/site2.png" class="header-logo-photo2"></a>
+				<a href="{{ url_for('home') }}" class="header-logo-titre2">Diozik</a><a class="shop" href="{{ url_for('shop') }}"><i class="fas fa-shopping-cart"></i></a></center>
+                <a href="{{ url_for('home') }}" class="header-logo"> <img src="static/img/site2.png" class="header-logo-photo"></a>
+				<a href="{{ url_for('home') }}" class="header-logo-titre">Diozik</a>
+                <nav class="header-menu">
+                    <ul class="test">
+                        <li class="deroulant"><a  class="icon" href="" id="menu-icon"><i class="fas fa-bars"></i></a>
+                            <ul class="sous">
+                                <hr class="separateur">
+                                <li class="t"><a href="{{ url_for('shop') }}" class="boutique">Boutique</a></li>
+                                <li class="t"><a class="t2" href="{{ url_for('about') }}">A propos</a></li>
+                                <li class="t"><a class="t2" href="{{ url_for('headersign') }}">{{ sign }}</a></li>
+                                <li class="t"><a class="t2" href="{{ url_for('headerlog') }}">{{ log }}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="sous2">
+                        <li><a href="{{ url_for('shop') }}" class="boutique2">Boutique</a></li>
+                        <li><a href="{{ url_for('headersign') }}">{{ sign }}</a></li>
+                        <li><a href="{{ url_for('headerlog') }}">{{ log }}</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <! -- HEADER -- >
+        <div class="back"><a class="link" href="{{ url_for('home') }}"><i class="fas fa-arrow-left"></i> Retourner à l'accueil</a></div>
+        <h1 class="about-title">À propos</h1>
+        <p class="paragraphe">
+            Diozik est détenu par 2 lycéens devant réaliser un projet durant leur année scolaire. Nous sommes les cousins éloignés de Steve Jobs
+            et possédons beaucoup d'argent et c'est pour cela que nous avons décidé de créer Diozik.<br>
+            Diozik est un service de streaming numérique qui propose de la musique, des podcasts et des vidéos, et qui vous offre un accès à
+            des millions de titres et à d'autres contenus d'artistes du monde entier. Les fonctionnalités de base sont totalement gratuites (p. ex., écouter de la musique, en mettre en ligne...),
+            mais vous pouvez également vous abonner à Diozik Premium pour accéder à d'autres fonctionnalités. <br>
+        </p>
+        <p class="paragraphe2">Profitez bien de nos services ;) !<br> L'équipe Diozik.</p>
+    </body>
+    <footer class="footer">
+        <h3 class="footer-text"><a href="{{ url_for('select') }}">CGU &emsp;</a>/ <a href="{{ url_for('select') }}">&emsp;CGV &emsp;</a>/ <a href="{{ url_for('select') }}">&emsp; Politique de Confidentalité </a>&emsp;/ &emsp; <a href="{{ url_for('contact') }}">Contact &emsp;</a>/ <a href="{{ url_for('about') }}">&emsp;À propos</a></h3>
+        <div class="under_propos"><h4>Diozik, Marque (non) déposée par 2 élèves de Saint-Aubin La Salle, 8 rue hélène Boucher, 49481 Verrières-en-Anjou, NSI, Mr Nédélec, Mr Belloc | 2021 ©Aucuns Droits Réservés</h4></div>
+    </footer>
+</html>

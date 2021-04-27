@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <script src="jquery-3.5.1.min.js"></script>
+        <meta charset="utf-8">
+        <title> Diozik </title>
+        
+        <! -- CSS -- >
+        <!--importation de BULMA--> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <link rel="icon" href="../static/img/icon.ico"/>
+        <link rel="stylesheet" href="../static/css/buy.css">
+        <! -- CSS -- >
+        
+        <! -- JS -- >
+        <script src="../static/js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap/min.js"></script>
+        <! -- JS -- >
+        
+        <! -- FONT -- >
+        <!--Importation des polices-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d124f7e81a.js" crossorigin="anonymous"></script>
+        <! -- FONT -->
+    </head>
+
+    <body>
+        <img class="fond" src="../static/img/fond-buy.jpg">
+        <h1 class="texte-fond">PAIEMENT</h1>
+        <div class="container">
+            <div class="box">
+                <h2 class="name">Payer en Bitcoins</h2>
+                <center><a href="#" class="buy">Scanner le QR code</a></center>
+                <div class="circle"></div>
+                <img src="../static/img/bitcoin.png" class="product2">
+                <img src="../static/img/qr.JPG" class="after-product">
+            </div>
+            <div class="box">
+                <h2 class="name">Payer avec PayPal</h2>
+                <center><a href="#" class="buy2">
+                <div id="smart-button-container">
+                    <div style="text-align: center;">
+                    <div id="paypal-button-container"></div>
+                </div></a></center>
+                <div class="circle"></div>
+                <img src="../static/img/paypal.png" class="product">
+            </div>
+        </div>
+        <script src="../static/js/vanilla-tilt.min.js"></script>
+
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".box"),
+            {
+                max: 25,
+                speed: 400
+            });
+        </script>
+
+        <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR" data-sdk-integration-source="button-factory"></script>
+        <script>
+        function initPayPalButton() {
+            paypal.Buttons({
+            style: {
+                shape: 'pill',
+                color: 'black',
+                layout: 'vertical',
+                label: 'pay',
+                
+            },
+
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                purchase_units: [{"description":"DIOZIK STUDENT","amount":{"currency_code":"EUR","value":9.99}}]
+                });
+            },
+
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            },
+
+            onError: function(err) {
+                console.log(err);
+            }
+            }).render('#paypal-button-container');
+        }
+        initPayPalButton();
+        </script>
+
+    </body>
+
+</html>

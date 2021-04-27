@@ -1,0 +1,160 @@
+#itsbody{
+    background: rgb(10,10,10);
+    color: #fff;
+}
+
+.my_title{
+    background:rgb(30,30,30);
+    width: 40%;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.share{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Montserrat',"", sans-serif;
+    font-weight: 700;
+    margin-left: 10px;
+    color: rgb(255,215,0);
+    margin-top: 20px;
+}
+
+.titre-part{
+    font-family: 'Montserrat', "", sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.form{
+    font-family: 'Montserrat',"", sans-serif;
+    font-weight: 300;
+    margin-left: 10px;
+    font-size: 22px;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.champs input{
+    width: 40%;
+    height:40px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background: rgb(30,30,30);
+    color: rgb(255,215,0)
+}
+
+.upload{
+    left: 50%;
+    right: 50%;
+    transform: translate(-200px);
+    color: rgb(80,80,80);
+    margin-bottom: 20px;
+}
+
+.upload .cta{
+    background: rgb(30,30,30);
+    border-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid;
+    box-shadow: none;
+    display: inline-flex;
+    height: 2.5em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(.5em - 1px);
+    padding-top: calc(.5em - 1px);
+    position: relative;
+    vertical-align: top;
+    border-right:none;
+}
+
+.upload .name{
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    display: block;
+    max-width: 16em;
+    overflow: hidden;
+    text-align: inherit;
+    text-overflow: ellipsis;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-size: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid;
+    box-shadow: none;
+    height: 2.5em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(.5em - 1px);
+    padding-top: calc(.5em - 1px);
+    position: relative;
+}
+
+.upload .label{
+    color: rgb(255,215,0);
+    font-weight: 300;
+}
+
+.upload .icon{
+    color: rgb(255,215,0);
+}
+
+.submit-button{
+    width: 40%;
+    height:40px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background: rgb(30,30,30);
+    color: rgb(255,215,0)
+}
+
+.submit-button{
+    border: none;
+    background : rgb(255, 215, 0);
+    border-radius: 10px;
+    margin-top: 10px;
+    color: rgb(10,10,10);
+    width: 15%;
+    height: 40px;
+    cursor: pointer;
+    font-family: 'Montserrat',"", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.1s ease-out; /* Safari et Chrome */
+    -moz-transition: all 0.1s ease-out; /* Firefox */
+    -ms-transition: all 0.1s ease-out; /* Internet Explorer 9 */
+    -o-transition: all 0.1s ease-out; /* Opera */
+    transition: all 0.1s ease-out;
+}
+
+.submit-button:hover{
+    color: white;
+    background:rgb(30,30,30);
+    -webkit-transform:scale(1.04); /* Safari et Chrome */
+    -moz-transform:scale(1.04); /* Firefox */
+    -ms-transform:scale(1.04); /* Internet Explorer 9 */
+    -o-transform:scale(1.04); /* Opera */
+    transform:scale(1.04);
+}

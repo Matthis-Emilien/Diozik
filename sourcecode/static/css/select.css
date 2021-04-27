@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Montserrat', "", sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0A0A0A;
+}
+
+.container{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    transform-style: preserve-3d;
+}
+
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background: rgb(255, 215, 0);
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+.container .box::before{
+    content: 'DIOZIK';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 4em;
+    font-weight: 900;
+    color: black;
+    font-style: italic;
+    opacity: 0;
+}
+
+.container .box:hover::after,
+.container .box:hover::before{
+    opacity: 0.04;
+}
+
+.container .box::after{
+    content: 'DIOZIK';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3em;
+    font-weight: 1000;
+    color: #0A0A0A;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box .name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    text-shadow:0 0 3px white, 0 0 3px white, 0 0 20px white;color:white;
+    font-weight: 900;
+    width: 100%;
+    font-size: large;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container .box:hover .name{
+    top: 40px;
+    opacity: 1;
+}
+
+.container .box .buy{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: white;
+    background: #0A0A0A;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+
+}
+
+.container .box:hover .buy{
+    bottom: 30px;
+    opacity: 1;
+}
+
+.container .box .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: white;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 50px);
+    z-index: 10;
+    opacity: 0;
+}
+
+.container .box .product{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 200px;
+    transition: 0.5s;
+    z-index: 15;
+    opacity: 1;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
+}
+
+.container .box:hover .product{
+    transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+}
+
+.container .box .circle,
+.container .box .buy{
+    background: #0A0A0A;
+}
+
+.bv{
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    color: white;
+    font-weight: 900;
+}
