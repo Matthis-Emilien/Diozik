@@ -29,7 +29,7 @@ _Prérequis : [Python 3](https://docs.python.org/3/index.html)_
 
    1. ***Installer [Flask](https://flask.palletsprojects.com/en/1.1.x/)***
       
-      Pour utiliser l'application, il est nécessaire d'installer **[Flask](https://flask.palletsprojects.com/en/1.1.x/)**.
+      Pour utiliser l'application, il est nécessaire d'installer [Flask](https://flask.palletsprojects.com/en/1.1.x/).
       
       Commencez par créer un dossier qui contiendra l'application web.
       Pour installer [Flask](https://flask.palletsprojects.com/en/1.1.x/), il est nécessaire de créer un environnement virtuel `venv`. Cet environnement virtuel python se trouvera dans le dossier du projet.
@@ -57,15 +57,15 @@ _Prérequis : [Python 3](https://docs.python.org/3/index.html)_
       ```
       > venv\Scripts\activate
       ```
-      Une fois ces étapes passées, il est possible d'installer **[Flask](https://flask.palletsprojects.com/en/1.1.x/)** pour ce faire, il suffit d'utilisez dans le terminal la commande suivante (Windows & Linux) :
+      Une fois ces étapes passées, il est possible d'installer [Flask](https://flask.palletsprojects.com/en/1.1.x/) pour ce faire, il suffit d'utilisez dans le terminal la commande suivante (Windows & Linux) :
       ```
       $ pip install Flask
       ```
-      Bravo ! Vous venez d'installer le module **[Flask](https://flask.palletsprojects.com/en/1.1.x/)** ! Si vous souhaitez travaillez avec la toute dernière version de flask, vous pouvez utiliser cette dernière commande (Windows & Linux) :
+      Bravo ! Vous venez d'installer le module [Flask](https://flask.palletsprojects.com/en/1.1.x/) ! Si vous souhaitez travaillez avec la toute dernière version de flask, vous pouvez utiliser cette dernière commande (Windows & Linux) :
       ```
       $ pip install -U https://github.com/pallets/flask/archive/master.tar.gz
       ```
-      Pour plus d'informations à propos de l'installation de **[Flask](https://flask.palletsprojects.com/en/1.1.x/)**, vous pouvez consultez la documentation ici : https://flask.palletsprojects.com/en/1.1.x/installation/#install-flask
+      Pour plus d'informations à propos de l'installation de [Flask](https://flask.palletsprojects.com/en/1.1.x/), vous pouvez consultez la documentation ici : https://flask.palletsprojects.com/en/1.1.x/installation/#install-flask
 
    2. ***Télécharger l'application***
       
