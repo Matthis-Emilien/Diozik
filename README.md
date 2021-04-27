@@ -106,7 +106,7 @@ _Prérequis : Python 3 https://docs.python.org/3/index.html_
       Si le réponse est différente, suivez les informations d'erreur pour essayer de résoudre le problème. Il est possible que votre port `5000` soit utilisé par une autre application. Dans ce cas, vous pouvez modifier à votre guise les deux dernières lignes du programme `app.py` :
       ```py
       if __name__ == '__main__':
-       app.run(host='localhost', port=8000', debug=True)
+       app.run(host='localhost', port=8000, debug=True)
       ```
       _Ceci est un exemple, vous pouvez modifier les valeurs de `host` et `port`._
 
