@@ -15,11 +15,11 @@ Les fonctionnalités sont les suivantes :
 
 **Il y a plusieurs manières de procéder afin d'accéder à l'application.**
 
-- Premièrement, on peut naviguer sur celle-ci via le lien suivant ramenant au site héberger à l'aide de Heroku :
+- Premièrement, on peut naviguer sur celle-ci via le lien suivant ramenant au site hébergé à l'aide de Heroku :
 
     **ICI** (https://diozik.herokuapp.com)
     
-    _Heroku, l'hébergeur, ne peut pas écrire dans les fichiers GitHub. Cela signifie que toute intérection avec des fichiers tel que la base de donnée ne sera pas enregistrée. Ainsi, les modifications que vous effectuerez seront éffacées dès lors qu'une mise à jour du site sera déployée par Heroku ou que les caches de votre navigateur seront effacé. Pour que vos modifications soient enregistrées, il faut ouvrir l'application en local comme décris lors de la seconde méthode._
+    _Heroku, l'hébergeur, ne peut pas écrire dans les fichiers GitHub. Cela signifie que toute intérection avec des fichiers tel que la base de donnée ne sera pas enregistrée. Ainsi, les modifications que vous effectuerez seront éffacées dès lors qu'une mise à jour du site sera déployée par Heroku ou que les caches de votre navigateur seront effacé. Pour que vos modifications soient enregistrées, il faut ouvrir l'application en local comme décris dans de la seconde méthode._
 
 ### _Démarrer à l'application en local_
 
