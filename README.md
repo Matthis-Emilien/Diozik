@@ -112,6 +112,6 @@ _Prérequis : [Python 3](https://docs.python.org/3/index.html)_
 
       Si le problème perssiste, vous pouvez nous contacter sur https://diozik.herokuapp.com/contact.
 
-## A notifier
+## Documentation
 
-La boutique est juste esthétique étant donner qu'elle ne changera rien lors d'un achat sur Diozik.
+Pour plus d'informations quant à l'utilisation de l'application et au développement du projet, vous pouvez consultez la documentation sous le fichier `Documentation_Diozik.pdf` accessible dans le GitHub.
