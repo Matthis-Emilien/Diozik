@@ -38,7 +38,7 @@ _Pour Mac Os, les instructions suivantes sont censées fonctionnées, mais nous 
       Commencez par créer un dossier qui contiendra l'application web.
       Pour installer [Flask](https://flask.palletsprojects.com/en/1.1.x/), il est nécessaire de créer un environnement virtuel `venv`. Cet environnement virtuel Python se trouvera dans le dossier du projet.
       
-      Pour créer cet environnement virtuel, ouvrer le terminal (_Linux_) ou l'invité de commande (_Windows_). Il est possible que votre session nécessite les droits d'administrateur. Accéder grâce à votre terminal au chemin de votre dossier. Pour cela, utilisez la commande `cd` (_Windows_ & _Linux_) :
+      Pour créer cet environnement virtuel, ouvrer le terminal (_Linux_) ou l'invité de commande (_Windows_). Il est possible que votre session nécessite les droits d'administrateur. Accédez grâce à votre terminal au chemin de votre dossier. Pour cela, utilisez la commande `cd` (_Windows_ & _Linux_) :
       
       ```
       $ cd Path\Folder\
@@ -53,7 +53,7 @@ _Pour Mac Os, les instructions suivantes sont censées fonctionnées, mais nous 
       > py -3 -m venv venv
       ```
       
-      Désormais, l'environnement virtuel est créé. Il faut maintenant l'activé. Pour ce faire, utilisez sous _Linux_ cette commande :
+      Désormais, l'environnement virtuel est créé. Il faut maintenant l'activer. Pour ce faire, utilisez sous _Linux_ cette commande :
       ```
       $ . venv/bin/activate
       ```
@@ -61,25 +61,25 @@ _Pour Mac Os, les instructions suivantes sont censées fonctionnées, mais nous 
       ```
       > venv\Scripts\activate
       ```
-      Une fois ces étapes passées, il est possible d'installer [Flask](https://flask.palletsprojects.com/en/1.1.x/) pour ce faire, il suffit d'utilisez dans le terminal la commande suivante (_Windows_ & _Linux_) :
+      Une fois ces étapes passées, il est possible d'installer [Flask](https://flask.palletsprojects.com/en/1.1.x/) pour ce faire, il suffit d'utiliser dans le terminal la commande suivante (_Windows_ & _Linux_) :
       ```
       $ pip install Flask
       ```
-      Bravo ! Vous venez d'installer le module [Flask](https://flask.palletsprojects.com/en/1.1.x/) ! Si vous souhaitez travaillez avec la toute dernière version de flask, vous pouvez utiliser cette dernière commande (_Windows_ & _Linux_) :
+      Bravo ! Vous venez d'installer le module [Flask](https://flask.palletsprojects.com/en/1.1.x/) ! Si vous souhaitez travailler avec la toute dernière version de [Flask](https://flask.palletsprojects.com/en/1.1.x/), vous pouvez utiliser cette dernière commande (_Windows_ & _Linux_) :
       ```
       $ pip install -U https://github.com/pallets/flask/archive/master.tar.gz
       ```
-      Pour plus d'informations à propos de l'installation de [Flask](https://flask.palletsprojects.com/en/1.1.x/), vous pouvez consultez la documentation ici : https://flask.palletsprojects.com/en/1.1.x/installation/#install-flask
+      Pour plus d'informations à propos de l'installation de [Flask](https://flask.palletsprojects.com/en/1.1.x/), vous pouvez consulter la documentation ici : https://flask.palletsprojects.com/en/1.1.x/installation/#install-flask
 
    2. ***Télécharger l'application***
       
-      Une fois [Flask](https://flask.palletsprojects.com/en/1.1.x/) installé, vous pouvez télécharger le code source de l'application. **Attention !** Le code source utilisable en local n'est pas exactement le même que le code source hébergé sur https://diozik.herokuapp.com/. Pour une utilisation optimale, quelques modifications ont été apporté auc fichiers utilisés par Heroku. De plus, certains fichiers sont nécessaire pour l'hébergement, mais ne sont d'aucune utilités pour une un démarrage en local. Ainsi, les fichiers à télécharger sont ceux du dossier `sourcecode`.
+      Une fois [Flask](https://flask.palletsprojects.com/en/1.1.x/) installé, vous pouvez télécharger le code source de l'application. **Attention !** Le code source utilisable en local n'est pas exactement le même que le code source hébergé sur https://diozik.herokuapp.com/. Pour une utilisation optimale, quelques modifications ont été apporté aux fichiers utilisés par Heroku. De plus, certains fichiers sont nécessaires pour l'hébergement, mais ne sont d'aucunes utilités pour un démarrage en local. Ainsi, les fichiers à télécharger sont ceux du dossier `sourcecode`.
       
-      Téléchargez l'ensemble des fichers du dossier `sourcecode` que vous placerez dans le dossier créer précédemment. Si toutes les étapes on été réalisées avec succès, vous êtes prêt pour démarrez l'application.
+      Téléchargez l'ensemble des fichers du dossier `sourcecode` que vous placerez dans le dossier créé précédemment. Si toutes les étapes ont été réalisé avec succès, vous êtes prêt pour démarrez l'application.
       
    3. ***Démarrer l'application***
       
-      Pour démarrer l'application il est nécessaire que l'environnement virtuel soit activé ! Certains environnements de développements (IDE) permettent une activation automatique de l'environnement de développement, mais si vous n'en utilisez pas, ou que vous ne savez pas si le votre l'active, veillez à le faire manuellement comme précédemment lors de l'installation de Fask. Pour ce faire, accèdez grâce à votre terminal (_Linux_) ou invité de commande (_Windows_) au chemin de votre dossier. Pour cela, utilisez la commande `cd` (_Windows_ & _Linux_) :
+      Pour démarrer l'application il est nécessaire que l'environnement virtuel soit activé ! Certains environnements de développement (IDE) permettent une activation automatique de l'environnement virtuel, mais si vous n'en utilisez pas, ou que vous ne savez pas si le votre l'active, veillez à le faire manuellement comme précédemment lors de l'installation de [Flask](https://flask.palletsprojects.com/en/1.1.x/). Pour ce faire, accèdez grâce à votre terminal (_Linux_) ou invité de commande (_Windows_) au chemin de votre dossier. Pour cela, utilisez la commande `cd` (_Windows_ & _Linux_) :
       
       ```
       $ cd Path\Folder\
@@ -92,18 +92,18 @@ _Pour Mac Os, les instructions suivantes sont censées fonctionnées, mais nous 
       ```
       > venv\Scripts\activate
       ```
-      Une fois cela effectuer, vous pouvez démarrer l'application en exécutez le fichier `app.py`.  Pour ce faire, en restant dans le même terminal, effectuez la commande suivante (_Windows_ & _Linux_) :
+      Une fois cela effectué, vous pouvez démarrer l'application en exécuter le fichier `app.py`.  Pour ce faire, en restant dans le même terminal, effectuez la commande suivante (_Windows_ & _Linux_) :
       ```
       $ python3 app.py
       ```
-      Si vous possedez un IDE, vous pouvez aussi exécuter le fihcier à partir de celui-ci.
+      Si vous possèdez un IDE, vous pouvez aussi exécuter le fihcier à partir de celui-ci.
       
-      Si le démarrage c'est bien effectué, vous devriez être capable de lire un message similaire à celui-ci sur votre terminal :    
+      Si le démarrage c'est bien effectué, vous devriez être capable de lire un message similaire à celui ci-dessous dans votre terminal :    
       
 
       ![Screenshot](image-readme/launcher.jpg)
 
-      Si c'est le cas, bravo ! Vous êtes prêt à utiliser l'application ! Vous pouvez y accéder avec le lien qui s'affiche dans votre teminale sur la forme suivante :
+      Si c'est le cas, bravo ! Vous êtes prêt à utiliser l'application ! Vous pouvez y accéder avec le lien qui s'affiche dans votre teminale sous la forme suivante :
       ```
       * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
       ```
@@ -112,10 +112,10 @@ _Pour Mac Os, les instructions suivantes sont censées fonctionnées, mais nous 
       if __name__ == '__main__':
        app.run(host='localhost', port=8000, debug=True)
       ```
-      _Ceci est un exemple, vous pouvez modifier les valeurs de `host` et `port`._
+      _Ceci est un exemple, vous pouvez modifier les valeurs de `host` et de `port`._
 
       Si le problème perssiste, vous pouvez nous contacter sur https://diozik.herokuapp.com/contact.
 
 ## Documentation
 
-Pour plus d'informations quant à l'utilisation de l'application et au développement du projet, vous pouvez consultez la documentation sous le fichier `Documentation_Diozik.pdf` accessible dans le GitHub.
+Pour plus d'informations quant à l'utilisation de l'application et au développement du projet, vous pouvez consulter la documentation sous le fichier `Documentation_Diozik.pdf` accessible dans le GitHub.
