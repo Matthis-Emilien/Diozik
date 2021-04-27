@@ -36,7 +36,7 @@ _Pour Mac Os, les instructions suivantes sont censées fonctionnées, mais nous 
       Pour utiliser l'application, il est nécessaire d'installer [Flask](https://flask.palletsprojects.com/en/1.1.x/).
       
       Commencez par créer un dossier qui contiendra l'application web.
-      Pour installer [Flask](https://flask.palletsprojects.com/en/1.1.x/), il est nécessaire de créer un environnement virtuel `venv`. Cet environnement virtuel python se trouvera dans le dossier du projet.
+      Pour installer [Flask](https://flask.palletsprojects.com/en/1.1.x/), il est nécessaire de créer un environnement virtuel `venv`. Cet environnement virtuel Python se trouvera dans le dossier du projet.
       
       Pour créer cet environnement virtuel, ouvrer le terminal (_Linux_) ou l'invité de commande (_Windows_). Il est possible que votre session nécessite les droits d'administrateur. Accéder grâce à votre terminal au chemin de votre dossier. Pour cela, utilisez la commande `cd` (_Windows_ & _Linux_) :
       
