@@ -15,4 +15,15 @@ Les fonctionnalités sont les suivantes :
 
 - Dans un premier temps, on peut naviguer sur celle-ci via le lien suivant ramenant au site héberger à l'aide de Heroku :
 
-    **ACCEDER A DIOZIK ICI** (https://diozik.herokuapp.com)
+    **ICI** (https://diozik.herokuapp.com)
+
+- Et pour démarrer l'application via le code source, voici la procédure :
+   - Téléchargez l'archive du projet (Project.rar)
+   - Extraire l'archive
+   - Ouvrir le dossier dans un interpreteur
+   - Run le fichier "app.py"
+   - Au lancement sera afficher ceci :
+  
+  
+   ![Screenshot](image-readme/launcher.jpg)
+   - Cliquez sur le lien, et l'application sera localement en marche sur votre machine
