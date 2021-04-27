@@ -34,7 +34,7 @@ _Prérequis : Python 3 https://docs.python.org/3/index.html_
       Commencez par créer un dossier qui contiendra l'application web.
       Pour installer Flask, il est nécessaire de créer un environnement virtuel `venv`. Cet environnement virtuel python se trouvera dans le dossier du projet.
       
-      Pour créer cet environnement virtuel, ouvrer le terminal (Linux) ou l'invité de commande (Windows). Il est possible que votre session nécessite les droits d'administrateur. Accéder grâce à votre terminal au chemin de votre dossier. Pour cela, utilisez la commande `cd` :
+      Pour créer cet environnement virtuel, ouvrer le terminal (Linux) ou l'invité de commande (Windows). Il est possible que votre session nécessite les droits d'administrateur. Accéder grâce à votre terminal au chemin de votre dossier. Pour cela, utilisez la commande `cd` (Windows & Linux) :
       
       ```
       $ cd Path\Folder\
@@ -57,11 +57,11 @@ _Prérequis : Python 3 https://docs.python.org/3/index.html_
       ```
       > venv\Scripts\activate
       ```
-      Une fois ces étapes passées, il est possible d'installer **Flask** pour ce faire, il suffit d'utilisez dans le terminal la commande suivante :
+      Une fois ces étapes passées, il est possible d'installer **Flask** pour ce faire, il suffit d'utilisez dans le terminal la commande suivante (Windows & Linux) :
       ```
       $ pip install Flask
       ```
-      Bravo ! Vous venez d'installer le module **Flask** ! Si vous souhaitez travaillez avec la toute dernière version de flask, vous pouvez utiliser cette dernière commande :
+      Bravo ! Vous venez d'installer le module **Flask** ! Si vous souhaitez travaillez avec la toute dernière version de flask, vous pouvez utiliser cette dernière commande (Windows & Linux) :
       ```
       $ pip install -U https://github.com/pallets/flask/archive/master.tar.gz
       ```
@@ -71,18 +71,46 @@ _Prérequis : Python 3 https://docs.python.org/3/index.html_
       
       Une fois Flask installé, vous pouvez télécharger le code source de l'application. **Attention !** Le code source utilisable en local n'est pas exactement le même que le code source hébergé sur https://diozik.herokuapp.com/. Pour une utilisation optimale, quelques modifications ont été apporté auc fichiers utilisés par Heroku. De plus, certains fichiers sont nécessaire pour l'hébergement, mais ne sont d'aucune utilités pour une un démarrage en local. Ainsi, les fichiers à télécharger sont ceux du dossier `sourcecode`.
       
-      Téléchargez l'ensemble des fichers du dossier `sourcecode` que vous placerez dans le dossier créer précédemment.
+      Téléchargez l'ensemble des fichers du dossier `sourcecode` que vous placerez dans le dossier créer précédemment. Si toutes les étapes on été réalisées avec succès, vous êtes prêt pour démarrez l'application.
       
    3. Démarrer l'application
-      - Téléchargez l'archive du projet (Project.rar)
-      - Extraire l'archive
-      - Ouvrir le dossier dans un interpreteur
-      - Run le fichier "app.py"
-      - Au lancement sera afficher ceci :
-  
+      
+      Pour démarrer l'application il est nécessaire que l'environnement virtuel soit activé ! Certains environnements de développements (IDE) permettent une activation automatique de l'environnement de développement, mais si vous n'en utilisez pas, ou que vous ne savez pas si le votre l'active, veillez à le faire manuellement comme précédemment lors de l'installation de Fask. Pour ce faire, accèdez grâce à votre terminal (Linux) ou invité de commande (Windows) au chemin de votre dossier. Pour cela, utilisez la commande `cd` (Windows & Linux) :
+      
+      ```
+      $ cd Path\Folder\
+      ```
+      Ensuite, activez votre environnement virtuel. Pour ce faire, utilisez sous Linux cette commande :
+      ```
+      $ . venv/bin/activate
+      ```
+      Utilisez sous Windows cette commande :
+      ```
+      > venv\Scripts\activate
+      ```
+      Une fois cela effectuer, vous pouvez démarrer l'application en exécutez le fichier `app.py`.  Pour ce faire, en restant dans le même terminal, effectuez la commande suivante (Windows & Linux) :
+      ```
+      $ python3 app.py
+      ```
+      Si vous possedez un IDE, vous pouvez aussi exécuter le fihcier à partir de celui-ci.
+      
+      Si le démarrage c'est bien effectué, vous devriez être capable de lire un message similaire à celui-ci sur votre terminal :    
+      
   
    ![Screenshot](image-readme/launcher.jpg)
-   - Cliquez sur le lien, et l'application sera localement en marche sur votre machine
+   
+   Si c'est le cas, bravo ! Vous êtes prêt à utiliser l'application ! Vous pouvez y accéder avec le lien qui s'affiche dans votre teminale sur la forme suivante :
+   ```
+   * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+   ```
+   Si le réponse est différente, suivez les informations d'erreur pour essayer de résoudre le problème. Il est possible que votre port `5000` soit utilisé par une autre application. Dans ce cas, vous pouvez modifier à votre guise les deux dernières lignes du programme `app.py` :
+   ```py
+   if __name__ == '__main__':
+    app.run(host='localhost', port=8000', debug=True)
+   ```
+   _Ceci est un exemple, vous pouvez modifier les valeurs de `host` et `port`._
+   
+   Si le problème perssiste, vous pouvez nous contacter sur https://diozik.herokuapp.com/contact.
 
 ## A notifier
 
