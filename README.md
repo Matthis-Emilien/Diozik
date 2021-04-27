@@ -27,7 +27,7 @@ _Prérequis : [Python 3](https://docs.python.org/3/index.html)_
 
 _Système d'exploitation : Linux, Windows._
 
-_Pour Mac Os, les instructions suivantes sont censées fonctionnées, mais nous n'avons pas eu l'occasion de les tester. Ainsi, vous pouvez les suivre et vous documenter à côté. Pour vous aider lors de l'installation de flask sur Mac Os, vous pouvez suivre [ce lien](https://gist.github.com/dineshviswanath/af72af0ae2031cd9949f)._
+_Pour Mac Os, les instructions suivantes sont censées fonctionnées, mais nous n'avons pas eu l'occasion de les tester. Ainsi, vous pouvez les suivre et vous documenter à côté. Pour vous aider lors de l'installation de Flask sur Mac Os, vous pouvez suivre [ce lien](https://gist.github.com/dineshviswanath/af72af0ae2031cd9949f)._
 
 - Deuxièmement, pour démarrer l'application via le code source, voici la procédure :
 
