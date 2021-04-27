@@ -9,17 +9,15 @@ Les fonctionnalités sont les suivantes :
 - mettre des musiques en ligne
 - consulter les profils d'utilisateurs, intéragir, rechercher
 
-## Démarrer l'application
-
-### Installez Flask
-
-Pour installez Flask ...
+### Démarrer l'application
 
 **Il y a plusieurs manières de procéder afin d'accéder à l'application.**
 
 - Premièrement, on peut naviguer sur celle-ci via le lien suivant ramenant au site héberger à l'aide de Heroku :
 
     **ICI** (https://diozik.herokuapp.com)
+    
+    _Heroku ne peut pas écrire dans les fichiers GitHub. Ainsi, Heroku ne peut pas modifier la base de donnée. Toute intéraction avec le site sera alors perdu dès lors que vous rafraichirez votre page. Par exemple, si vous créer un compte, il sera utilisable pour consulter l'ensemble de l'application mais dès lors que vous la quitterez, il sera perdu. Pour écrire dans les fichiers, vous pouvez suivre la seconde méthode._
 
 - Deuxièmement, pour démarrer l'application via le code source, voici la procédure :
    - Téléchargez l'archive du projet (Project.rar)
