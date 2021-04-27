@@ -96,21 +96,21 @@ _Prérequis : Python 3 https://docs.python.org/3/index.html_
       
       Si le démarrage c'est bien effectué, vous devriez être capable de lire un message similaire à celui-ci sur votre terminal :    
       
-  
-   ![Screenshot](image-readme/launcher.jpg)
-   
-   Si c'est le cas, bravo ! Vous êtes prêt à utiliser l'application ! Vous pouvez y accéder avec le lien qui s'affiche dans votre teminale sur la forme suivante :
-   ```
-   * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-   ```
-   Si le réponse est différente, suivez les informations d'erreur pour essayer de résoudre le problème. Il est possible que votre port `5000` soit utilisé par une autre application. Dans ce cas, vous pouvez modifier à votre guise les deux dernières lignes du programme `app.py` :
-   ```py
-   if __name__ == '__main__':
-    app.run(host='localhost', port=8000', debug=True)
-   ```
-   _Ceci est un exemple, vous pouvez modifier les valeurs de `host` et `port`._
-   
-   Si le problème perssiste, vous pouvez nous contacter sur https://diozik.herokuapp.com/contact.
+
+      ![Screenshot](image-readme/launcher.jpg)
+
+      Si c'est le cas, bravo ! Vous êtes prêt à utiliser l'application ! Vous pouvez y accéder avec le lien qui s'affiche dans votre teminale sur la forme suivante :
+      ```
+      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+      ```
+      Si le réponse est différente, suivez les informations d'erreur pour essayer de résoudre le problème. Il est possible que votre port `5000` soit utilisé par une autre application. Dans ce cas, vous pouvez modifier à votre guise les deux dernières lignes du programme `app.py` :
+      ```py
+      if __name__ == '__main__':
+       app.run(host='localhost', port=8000', debug=True)
+      ```
+      _Ceci est un exemple, vous pouvez modifier les valeurs de `host` et `port`._
+
+      Si le problème perssiste, vous pouvez nous contacter sur https://diozik.herokuapp.com/contact.
 
 ## A notifier
 
