@@ -17,7 +17,7 @@ Les fonctionnalités sont les suivantes :
 
     **ICI** (https://diozik.herokuapp.com)
     
-    _Heroku, l'hébergeur, ne peut pas écrire dans les fichiers GitHub. Cela signifie que toute intérection avec des fichiers tel que la base de donnée ne sera pas enregistrée. Ainsi, les modifications que vous effectuerez seront éffacées dès lors qu'une mise à jour du site sera déployée par Héroku ou que les caches de votre navigateur seront effacé. Pourque vos modifications soient enregistrées, il faut ouvrir l'application en local comme décris lors de la seconde méthode._
+    _Heroku, l'hébergeur, ne peut pas écrire dans les fichiers GitHub. Cela signifie que toute intérection avec des fichiers tel que la base de donnée ne sera pas enregistrée. Ainsi, les modifications que vous effectuerez seront éffacées dès lors qu'une mise à jour du site sera déployée par Heroku ou que les caches de votre navigateur seront effacé. Pour que vos modifications soient enregistrées, il faut ouvrir l'application en local comme décris lors de la seconde méthode._
 
 - Deuxièmement, pour démarrer l'application via le code source, voici la procédure :
    - Téléchargez l'archive du projet (Project.rar)
