@@ -34,34 +34,34 @@ _Prérequis : [Python 3](https://docs.python.org/3/index.html)_
       Commencez par créer un dossier qui contiendra l'application web.
       Pour installer [Flask](https://flask.palletsprojects.com/en/1.1.x/), il est nécessaire de créer un environnement virtuel `venv`. Cet environnement virtuel python se trouvera dans le dossier du projet.
       
-      Pour créer cet environnement virtuel, ouvrer le terminal (Linux) ou l'invité de commande (Windows). Il est possible que votre session nécessite les droits d'administrateur. Accéder grâce à votre terminal au chemin de votre dossier. Pour cela, utilisez la commande `cd` (Windows & Linux) :
+      Pour créer cet environnement virtuel, ouvrer le terminal (_Linux_) ou l'invité de commande (_Windows_). Il est possible que votre session nécessite les droits d'administrateur. Accéder grâce à votre terminal au chemin de votre dossier. Pour cela, utilisez la commande `cd` (_Windows_ & _Linux_) :
       
       ```
       $ cd Path\Folder\
       ```
       
-      Ensuite, Python 3 permet de créer l'environnement virtuel. Sous Linux, utilisez cette commande :
+      Ensuite, Python 3 permet de créer l'environnement virtuel. Sous _Linux_, utilisez cette commande :
       ```
       $ python3 -m venv venv
       ```
-      Sous Windows, utilisez cette commande :
+      Sous _Windows_, utilisez cette commande :
       ```
       > py -3 -m venv venv
       ```
       
-      Désormais, l'environnement virtuel est créé. Il faut maintenant l'activé. Pour ce faire, utilisez sous Linux cette commande :
+      Désormais, l'environnement virtuel est créé. Il faut maintenant l'activé. Pour ce faire, utilisez sous _Linux_ cette commande :
       ```
       $ . venv/bin/activate
       ```
-      Utilisez sous Windows cette commande :
+      Utilisez sous _Windows_ cette commande :
       ```
       > venv\Scripts\activate
       ```
-      Une fois ces étapes passées, il est possible d'installer [Flask](https://flask.palletsprojects.com/en/1.1.x/) pour ce faire, il suffit d'utilisez dans le terminal la commande suivante (Windows & Linux) :
+      Une fois ces étapes passées, il est possible d'installer [Flask](https://flask.palletsprojects.com/en/1.1.x/) pour ce faire, il suffit d'utilisez dans le terminal la commande suivante (_Windows_ & _Linux_) :
       ```
       $ pip install Flask
       ```
-      Bravo ! Vous venez d'installer le module [Flask](https://flask.palletsprojects.com/en/1.1.x/) ! Si vous souhaitez travaillez avec la toute dernière version de flask, vous pouvez utiliser cette dernière commande (Windows & Linux) :
+      Bravo ! Vous venez d'installer le module [Flask](https://flask.palletsprojects.com/en/1.1.x/) ! Si vous souhaitez travaillez avec la toute dernière version de flask, vous pouvez utiliser cette dernière commande (_Windows_ & _Linux_) :
       ```
       $ pip install -U https://github.com/pallets/flask/archive/master.tar.gz
       ```
@@ -75,20 +75,20 @@ _Prérequis : [Python 3](https://docs.python.org/3/index.html)_
       
    3. ***Démarrer l'application***
       
-      Pour démarrer l'application il est nécessaire que l'environnement virtuel soit activé ! Certains environnements de développements (IDE) permettent une activation automatique de l'environnement de développement, mais si vous n'en utilisez pas, ou que vous ne savez pas si le votre l'active, veillez à le faire manuellement comme précédemment lors de l'installation de Fask. Pour ce faire, accèdez grâce à votre terminal (Linux) ou invité de commande (Windows) au chemin de votre dossier. Pour cela, utilisez la commande `cd` (Windows & Linux) :
+      Pour démarrer l'application il est nécessaire que l'environnement virtuel soit activé ! Certains environnements de développements (IDE) permettent une activation automatique de l'environnement de développement, mais si vous n'en utilisez pas, ou que vous ne savez pas si le votre l'active, veillez à le faire manuellement comme précédemment lors de l'installation de Fask. Pour ce faire, accèdez grâce à votre terminal (_Linux_) ou invité de commande (_Windows_) au chemin de votre dossier. Pour cela, utilisez la commande `cd` (_Windows_ & _Linux_) :
       
       ```
       $ cd Path\Folder\
       ```
-      Ensuite, activez votre environnement virtuel. Pour ce faire, utilisez sous Linux cette commande :
+      Ensuite, activez votre environnement virtuel. Pour ce faire, utilisez sous _Linux_ cette commande :
       ```
       $ . venv/bin/activate
       ```
-      Utilisez sous Windows cette commande :
+      Utilisez sous _Windows_ cette commande :
       ```
       > venv\Scripts\activate
       ```
-      Une fois cela effectuer, vous pouvez démarrer l'application en exécutez le fichier `app.py`.  Pour ce faire, en restant dans le même terminal, effectuez la commande suivante (Windows & Linux) :
+      Une fois cela effectuer, vous pouvez démarrer l'application en exécutez le fichier `app.py`.  Pour ce faire, en restant dans le même terminal, effectuez la commande suivante (_Windows_ & _Linux_) :
       ```
       $ python3 app.py
       ```
