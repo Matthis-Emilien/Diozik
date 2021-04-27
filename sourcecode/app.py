@@ -17,9 +17,9 @@ from email.mime.text import MIMEText
 from flask import Flask, render_template, session, redirect, url_for, request, Response
 from werkzeug.utils import secure_filename
 
-from Project.mytracks import MyTracks
-from Project.track import Track
-from Project.search import Search
+from mytracks import MyTracks
+from track import Track
+from search import Search
 
 # ---------- INITIALISATION DE FLASK ---------- #
 app = Flask(__name__)

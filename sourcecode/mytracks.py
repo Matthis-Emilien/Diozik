@@ -1,6 +1,6 @@
 import sqlite3 as sql
 import random
-from Project.track import Track
+from track import Track
 
 sortmods = ["alphabetic", "non-alphabetic", "random"]
 
